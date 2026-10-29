@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_mint"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title Header with AI Purple Sparkle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✨ AI Mental Check-in"
+            android:textColor="@color/ai_purple"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Express your daily feelings in natural language. The AI engine analyzes stress indicators in real-time."
+            android:textColor="@color/text_subtle"
+            android:textSize="13sp" />
+
+        <!-- User Text Input Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_medical_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/etCheckInText"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="#F9FAFB"
+                android:gravity="top|start"
+                android:hint='Example: "I have been working continuously for several days. I am not sleeping properly and I feel exhausted."'
+                android:inputType="textMultiLine"
+                android:padding="12dp"
+                android:textColor="@color/text_dark"
+                android:textSize="14sp" />
+
+            <!-- Purple AI Accent Action Button -->
+            <Button
+                android:id="@+id/btnAnalyze"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_ai_button"
+                android:text="@string/perform_ai_analysis"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!-- AI Analyzing Progress Indicator -->
+            <LinearLayout
+                android:id="@+id/layoutAnalyzingState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:id="@+id/progressBarAnalyzing"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/ai_purple" />
+
+                <TextView
+                    android:id="@+id/txtAnalyzingState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/ai_analyzing_state"
+                    android:textColor="@color/ai_purple"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Dynamic AI Analysis Result Container -->
+        <LinearLayout
+            android:id="@+id/cardResultContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_medical_card"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AI Mental Assessment"
+                    android:textColor="@color/ai_purple_dark"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtResultConfidence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/bg_ai_chip"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="3dp"
+                    android:text="Confidence: 87%"
+                    android:textColor="@color/ai_purple"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <!-- Stress Level & Badge -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stress Level:"
+                    android:textColor="@color/text_subtle"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtResultLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:background="@color/stress_high_bg"
+                    android:paddingHorizontal="14dp"
+                    android:paddingVertical="4dp"
+                    android:text="HIGH (81%)"
+                    android:textColor="@color/stress_high"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtResultDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="High stress indicators detected"
+                android:textColor="@color/text_dark"
+                android:textSize="13sp" />
+
+            <!-- Detected Indicators List -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Detected Risk Indicators:"
+                android:textColor="@color/text_dark"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtResultIndicators"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="#F9FAFB"
+                android:padding="12dp"
+                android:text="• Work pressure\n• Poor sleep\n• Mental fatigue"
+                android:textColor="@color/text_dark"
+                android:textSize="13sp" />
+
+            <!-- Suggested Actions -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Personalized Recommendation:"
+                android:textColor="@color/dark_green"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtResultRecommendations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@color/light_mint"
+                android:padding="12dp"
+                android:text="Consider taking a short break and prioritizing rest."
+                android:textColor="@color/dark_green"
+                android:textSize="13sp" />
+
+            <!-- Safety Crisis Banner -->
+            <LinearLayout
+                android:id="@+id/bannerCrisisAlert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/stress_high_bg"
+                android:orientation="vertical"
+                android:padding="14dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚠️ High Distress Indicators Detected"
+                    android:textColor="@color/stress_high"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Please consider reaching out to a trusted contact or a qualified professional."
+                    android:textColor="@color/text_dark"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnCrisisHelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_button_green"
+                    android:backgroundTint="@color/stress_high"
+                    android:text="🆘 Contact Trusted Support"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Inline Result Disclaimer -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="ℹ️ Disclaimer: This AI result is for wellness support and is not a medical diagnosis."
+                android:textColor="@color/text_subtle"
+                android:textSize="11sp"
+                android:textStyle="italic" />
+
+            <!-- Action Buttons: Save Result & View History -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnSaveResult"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button_green"
+                    android:text="💾 Saved to History ✓"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnViewHistory"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_ai_button"
+                    android:text="📊 View History"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Responsible AI & Wellness Disclaimer Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_medical_card"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🛡️"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/ai_disclaimer_title"
+                    android:textColor="@color/dark_green"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/ai_disclaimer_text"
+                android:textColor="@color/text_subtle"
+                android:textSize="11sp"
+                android:lineSpacingExtra="2dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/ai_transparency_note"
+                android:textColor="@color/ai_purple"
+                android:textSize="10sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

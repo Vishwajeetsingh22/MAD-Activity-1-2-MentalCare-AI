@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.AIMentalCare" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_green</item>
+        <item name="colorPrimaryVariant">@color/dark_green</item>
+        <item name="colorOnPrimary">@color/text_dark</item>
+        <item name="colorSecondary">@color/ai_purple</item>
+        <item name="colorSurface">@color/card_background</item>
+        <item name="colorOnSurface">@color/main_text</item>
+        <item name="android:statusBarColor">@color/dark_background</item>
+        <item name="android:windowBackground">@color/dark_background</item>
+    </style>
+
+    <style name="Theme.AIMentalCare.Splash" parent="Theme.AIMentalCare">
+        <item name="android:statusBarColor">@color/dark_background</item>
+        <item name="android:windowBackground">@color/dark_background</item>
+    </style>
+</resources>

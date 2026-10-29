@@ -1,0 +1,282 @@
+ .gitignore                                         |   13 [32m+[m
+ AIMentalCare-Keys/mentalcare-release.jks           |  Bin [31m0[m -> [32m2800[m bytes
+ AIMentalCare/.gitignore                            |   32 [32m+[m
+ AIMentalCare/AIMentalCareApp/.gitignore            |   41 [32m+[m
+ AIMentalCare/AIMentalCareApp/app/build.gradle      |   69 [32m+[m
+ .../AIMentalCareApp/app/release/app-release.apk    |  Bin [31m0[m -> [32m6206637[m bytes
+ .../app/release/baselineProfiles/0/app-release.dm  |  Bin [31m0[m -> [32m4462[m bytes
+ .../app/release/baselineProfiles/1/app-release.dm  |  Bin [31m0[m -> [32m4410[m bytes
+ .../app/release/output-metadata.json               |   37 [32m+[m
+ .../app/src/main/AndroidManifest.xml               |   74 [32m+[m
+ .../com/aimentalcare/app/MentalCareApplication.kt  |   15 [32m+[m
+ .../java/com/aimentalcare/app/api/ApiClient.kt     |   37 [32m+[m
+ .../java/com/aimentalcare/app/api/ApiService.kt    |  102 [32m++[m
+ .../com/aimentalcare/app/data/ChatMessageEntity.kt |   16 [32m+[m
+ .../java/com/aimentalcare/app/data/CheckInDao.kt   |  198 [32m++[m
+ .../com/aimentalcare/app/data/CheckInEntity.kt     |   23 [32m+[m
+ .../com/aimentalcare/app/data/DailyPlanEntity.kt   |   29 [32m+[m
+ .../aimentalcare/app/data/FirebaseSyncHelper.kt    |   33 [32m+[m
+ .../java/com/aimentalcare/app/data/GoalEntity.kt   |   17 [32m+[m
+ .../com/aimentalcare/app/data/HeartRateEntity.kt   |   16 [32m+[m
+ .../com/aimentalcare/app/data/JournalEntity.kt     |   18 [32m+[m
+ .../com/aimentalcare/app/data/LifestyleEntity.kt   |   18 [32m+[m
+ .../aimentalcare/app/data/MentalCareDatabase.kt    |   74 [32m+[m
+ .../aimentalcare/app/data/StressResultEntity.kt    |   18 [32m+[m
+ .../aimentalcare/app/data/TrustedContactEntity.kt  |   14 [32m+[m
+ .../java/com/aimentalcare/app/data/UserEntity.kt   |   14 [32m+[m
+ .../app/data/WellnessActivityEntity.kt             |   15 [32m+[m
+ .../java/com/aimentalcare/app/theme/AppColors.kt   |   49 [32m+[m
+ .../java/com/aimentalcare/app/theme/AppRadius.kt   |   13 [32m+[m
+ .../java/com/aimentalcare/app/theme/AppShadows.kt  |   11 [32m+[m
+ .../java/com/aimentalcare/app/theme/AppSpacing.kt  |   14 [32m+[m
+ .../com/aimentalcare/app/theme/AppTypography.kt    |   14 [32m+[m
+ .../java/com/aimentalcare/app/ui/AboutFragment.kt  |   56 [32m+[m
+ .../com/aimentalcare/app/ui/ActivitiesAdapter.kt   |   55 [32m+[m
+ .../com/aimentalcare/app/ui/ActivitiesFragment.kt  |  218 [32m+++[m
+ .../com/aimentalcare/app/ui/AnalyticsFragment.kt   |  486 [32m+++++[m
+ .../java/com/aimentalcare/app/ui/ChatAdapter.kt    |   66 [32m+[m
+ .../com/aimentalcare/app/ui/ChatHistoryAdapter.kt  |   55 [32m+[m
+ .../com/aimentalcare/app/ui/ChatHistoryFragment.kt |  102 [32m++[m
+ .../com/aimentalcare/app/ui/ChatbotFragment.kt     |  316 [32m++++[m
+ .../com/aimentalcare/app/ui/CheckInFragment.kt     |  206 [32m+++[m
+ .../aimentalcare/app/ui/DailyCheckInFragment.kt    |  591 [32m++++++[m
+ .../com/aimentalcare/app/ui/DailyPlanFragment.kt   |  168 [32m++[m
+ .../com/aimentalcare/app/ui/DashboardFragment.kt   |  268 [32m+++[m
+ .../app/ui/EmergencyContactsAdapter.kt             |   47 [32m+[m
+ .../app/ui/EmergencyContactsFragment.kt            |  185 [32m++[m
+ .../java/com/aimentalcare/app/ui/GoalsAdapter.kt   |   73 [32m+[m
+ .../java/com/aimentalcare/app/ui/GoalsFragment.kt  |  170 [32m++[m
+ .../java/com/aimentalcare/app/ui/JournalAdapter.kt |   79 [32m+[m
+ .../com/aimentalcare/app/ui/JournalFragment.kt     |  321 [32m++++[m
+ .../com/aimentalcare/app/ui/LifestyleFragment.kt   |   96 [32m+[m
+ .../java/com/aimentalcare/app/ui/LoginActivity.kt  |   48 [32m+[m
+ .../java/com/aimentalcare/app/ui/MainActivity.kt   |  131 [32m++[m
+ .../com/aimentalcare/app/ui/OnboardingActivity.kt  |  308 [32m++++[m
+ .../com/aimentalcare/app/ui/ProfileFragment.kt     |  232 [32m+++[m
+ .../com/aimentalcare/app/ui/RegisterActivity.kt    |   71 [32m+[m
+ .../com/aimentalcare/app/ui/SettingsFragment.kt    |  427 [32m+++++[m
+ .../com/aimentalcare/app/ui/SosSettingsFragment.kt |   75 [32m+[m
+ .../java/com/aimentalcare/app/ui/SplashActivity.kt |   36 [32m+[m
+ .../com/aimentalcare/app/ui/StressChartView.kt     |  224 [32m+++[m
+ .../com/aimentalcare/app/ui/SupportFragment.kt     |  116 [32m++[m
+ .../app/ui/WearableWellnessFragment.kt             |  234 [32m+++[m
+ .../app/utils/AuthenticationEvaluator.kt           |  100 [32m++[m
+ .../app/utils/CheckInReminderReceiver.kt           |   86 [32m+[m
+ .../com/aimentalcare/app/utils/LocalChatEngine.kt  |  247 [32m+++[m
+ .../com/aimentalcare/app/utils/LocalNLPEngine.kt   |  166 [32m++[m
+ .../aimentalcare/app/utils/NotificationHelper.kt   |  215 [32m+++[m
+ .../app/utils/ProfileSettingsEvaluator.kt          |   56 [32m+[m
+ .../app/utils/WearableWellnessManager.kt           |  205 [32m+++[m
+ .../app/src/main/res/drawable/bg_ai_button.xml     |    6 [32m+[m
+ .../app/src/main/res/drawable/bg_ai_chip.xml       |    9 [32m+[m
+ .../app/src/main/res/drawable/bg_ai_glass_card.xml |    9 [32m+[m
+ .../main/res/drawable/bg_bottom_nav_floating.xml   |   13 [32m+[m
+ .../app/src/main/res/drawable/bg_button_green.xml  |    6 [32m+[m
+ .../app/src/main/res/drawable/bg_card_premium.xml  |    9 [32m+[m
+ .../src/main/res/drawable/bg_chat_ai_bubble.xml    |   13 [32m+[m
+ .../src/main/res/drawable/bg_chat_user_bubble.xml  |   10 [32m+[m
+ .../src/main/res/drawable/bg_header_gradient.xml   |   10 [32m+[m
+ .../main/res/drawable/bg_hero_card_gradient.xml    |   10 [32m+[m
+ .../app/src/main/res/drawable/bg_medical_card.xml  |    9 [32m+[m
+ .../src/main/res/drawable/bg_pill_completed.xml    |    9 [32m+[m
+ .../app/src/main/res/drawable/bg_pill_pending.xml  |    9 [32m+[m
+ .../app/src/main/res/drawable/ic_ai_chat_fab.xml   |   12 [32m+[m
+ .../app/src/main/res/drawable/ic_back_arrow.xml    |    9 [32m+[m
+ .../app/src/main/res/drawable/ic_close.xml         |    9 [32m+[m
+ .../app/src/main/res/drawable/ic_delete.xml        |    9 [32m+[m
+ .../app/src/main/res/drawable/ic_edit.xml          |    9 [32m+[m
+ .../app/src/main/res/drawable/ic_lock.xml          |    9 [32m+[m
+ .../app/src/main/res/drawable/ic_logo.png          |  Bin [31m0[m -> [32m116500[m bytes
+ .../app/src/main/res/drawable/ic_mail.xml          |    9 [32m+[m
+ .../app/src/main/res/drawable/ic_nav_about.xml     |    9 [32m+[m
+ .../app/src/main/res/drawable/ic_nav_analytics.xml |    9 [32m+[m
+ .../app/src/main/res/drawable/ic_nav_checkin.xml   |    9 [32m+[m
+ .../app/src/main/res/drawable/ic_nav_dashboard.xml |    9 [32m+[m
+ .../app/src/main/res/drawable/ic_nav_lifestyle.xml |    9 [32m+[m
+ .../app/src/main/res/drawable/ic_nav_profile.xml   |    9 [32m+[m
+ .../app/src/main/res/drawable/ic_nav_support.xml   |    9 [32m+[m
+ .../app/src/main/res/drawable/ic_search.xml        |    9 [32m+[m
+ .../app/src/main/res/drawable/ic_send.xml          |    9 [32m+[m
+ .../app/src/main/res/drawable/ic_sparkles.xml      |    9 [32m+[m
+ .../app/src/main/res/layout/activity_login.xml     |  120 [32m++[m
+ .../app/src/main/res/layout/activity_main.xml      |  110 [32m++[m
+ .../src/main/res/layout/activity_onboarding.xml    |  749 [32m++++++++[m
+ .../app/src/main/res/layout/activity_register.xml  |  128 [32m++[m
+ .../app/src/main/res/layout/activity_splash.xml    |   39 [32m+[m
+ .../src/main/res/layout/dialog_activity_timer.xml  |   89 [32m+[m
+ .../main/res/layout/dialog_add_edit_contact.xml    |   94 [32m+[m
+ .../main/res/layout/dialog_add_edit_journal.xml    |  136 [32m++[m
+ .../app/src/main/res/layout/dialog_add_goal.xml    |  116 [32m++[m
+ .../app/src/main/res/layout/fragment_about.xml     |  340 [32m++++[m
+ .../src/main/res/layout/fragment_activities.xml    |   96 [32m+[m
+ .../app/src/main/res/layout/fragment_analytics.xml |  576 [32m++++++[m
+ .../src/main/res/layout/fragment_chat_history.xml  |  105 [32m++[m
+ .../app/src/main/res/layout/fragment_chatbot.xml   |  296 [32m+++[m
+ .../app/src/main/res/layout/fragment_checkin.xml   |  350 [32m++++[m
+ .../src/main/res/layout/fragment_daily_checkin.xml |  546 [32m++++++[m
+ .../src/main/res/layout/fragment_daily_plan.xml    |  505 [32m++++++[m
+ .../app/src/main/res/layout/fragment_dashboard.xml |  613 [32m+++++++[m
+ .../res/layout/fragment_emergency_contacts.xml     |  101 [32m++[m
+ .../app/src/main/res/layout/fragment_goals.xml     |  106 [32m++[m
+ .../app/src/main/res/layout/fragment_journal.xml   |  300 [32m++++[m
+ .../app/src/main/res/layout/fragment_lifestyle.xml |  183 [32m++[m
+ .../app/src/main/res/layout/fragment_profile.xml   |  753 [32m++++++++[m
+ .../app/src/main/res/layout/fragment_settings.xml  |  829 [32m+++++++++[m
+ .../src/main/res/layout/fragment_sos_settings.xml  |  156 [32m++[m
+ .../app/src/main/res/layout/fragment_support.xml   |  148 [32m++[m
+ .../main/res/layout/fragment_wearable_wellness.xml |  330 [32m++++[m
+ .../app/src/main/res/layout/item_chat_history.xml  |   66 [32m+[m
+ .../app/src/main/res/layout/item_chat_message.xml  |  100 [32m++[m
+ .../src/main/res/layout/item_emergency_contact.xml |   94 [32m+[m
+ .../app/src/main/res/layout/item_goal.xml          |  106 [32m++[m
+ .../app/src/main/res/layout/item_journal.xml       |  136 [32m++[m
+ .../src/main/res/layout/item_wellness_activity.xml |   81 [32m+[m
+ .../app/src/main/res/layout/view_empty_state.xml   |   45 [32m+[m
+ .../app/src/main/res/layout/view_error_state.xml   |   44 [32m+[m
+ .../app/src/main/res/layout/view_loading_state.xml |   28 [32m+[m
+ .../src/main/res/layout/view_section_header.xml    |   46 [32m+[m
+ .../app/src/main/res/menu/bottom_nav_menu.xml      |   23 [32m+[m
+ .../src/main/res/mipmap-anydpi-v26/ic_launcher.xml |    5 [32m+[m
+ .../res/mipmap-anydpi-v26/ic_launcher_round.xml    |    5 [32m+[m
+ .../app/src/main/res/mipmap-hdpi/ic_launcher.png   |  Bin [31m0[m -> [32m6810[m bytes
+ .../res/mipmap-hdpi/ic_launcher_foreground.png     |  Bin [31m0[m -> [32m6599[m bytes
+ .../src/main/res/mipmap-hdpi/ic_launcher_round.png |  Bin [31m0[m -> [32m6781[m bytes
+ .../app/src/main/res/mipmap-mdpi/ic_launcher.png   |  Bin [31m0[m -> [32m3901[m bytes
+ .../res/mipmap-mdpi/ic_launcher_foreground.png     |  Bin [31m0[m -> [32m4242[m bytes
+ .../src/main/res/mipmap-mdpi/ic_launcher_round.png |  Bin [31m0[m -> [32m3971[m bytes
+ .../app/src/main/res/mipmap-xhdpi/ic_launcher.png  |  Bin [31m0[m -> [32m9710[m bytes
+ .../res/mipmap-xhdpi/ic_launcher_foreground.png    |  Bin [31m0[m -> [32m10198[m bytes
+ .../main/res/mipmap-xhdpi/ic_launcher_round.png    |  Bin [31m0[m -> [32m9436[m bytes
+ .../app/src/main/res/mipmap-xxhdpi/ic_launcher.png |  Bin [31m0[m -> [32m17382[m bytes
+ .../res/mipmap-xxhdpi/ic_launcher_foreground.png   |  Bin [31m0[m -> [32m17416[m bytes
+ .../main/res/mipmap-xxhdpi/ic_launcher_round.png   |  Bin [31m0[m -> [32m15401[m bytes
+ .../src/main/res/mipmap-xxxhdpi/ic_launcher.png    |  Bin [31m0[m -> [32m26380[m bytes
+ .../res/mipmap-xxxhdpi/ic_launcher_foreground.png  |  Bin [31m0[m -> [32m22742[m bytes
+ .../main/res/mipmap-xxxhdpi/ic_launcher_round.png  |  Bin [31m0[m -> [32m21098[m bytes
+ .../app/src/main/res/values-night/colors.xml       |   53 [32m+[m
+ .../app/src/main/res/values-night/themes.xml       |   18 [32m+[m
+ .../app/src/main/res/values/colors.xml             |   54 [32m+[m
+ .../app/src/main/res/values/dimens.xml             |   33 [32m+[m
+ .../app/src/main/res/values/strings.xml            |   62 [32m+[m
+ .../app/src/main/res/values/styles.xml             |   91 [32m+[m
+ .../app/src/main/res/values/themes.xml             |   18 [32m+[m
+ .../com/aimentalcare/app/AuthenticationFlowTest.kt |  195 [32m++[m
+ .../com/aimentalcare/app/ChatbotContextTest.kt     |  100 [32m++[m
+ .../aimentalcare/app/DailyQuizEnforcementTest.kt   |  199 [32m+++[m
+ .../aimentalcare/app/HeartRateAndWearableTest.kt   |  217 [32m+++[m
+ .../com/aimentalcare/app/JournalAndWellnessTest.kt |  165 [32m++[m
+ .../com/aimentalcare/app/ProfileAndSettingsTest.kt |  159 [32m++[m
+ .../app/RemindersAndNotificationsTest.kt           |  170 [32m++[m
+ .../com/aimentalcare/app/StressInsightsTest.kt     |  174 [32m++[m
+ AIMentalCare/AIMentalCareApp/build.gradle          |   10 [32m+[m
+ AIMentalCare/AIMentalCareApp/gradle.properties     |   23 [32m+[m
+ .../gradle/wrapper/gradle-wrapper.jar              |  Bin [31m0[m -> [32m46175[m bytes
+ .../gradle/wrapper/gradle-wrapper.properties       |    5 [32m+[m
+ AIMentalCare/AIMentalCareApp/gradlew               |  248 [32m+++[m
+ AIMentalCare/AIMentalCareApp/gradlew.bat           |   94 [32m+[m
+ AIMentalCare/AIMentalCareApp/settings.gradle       |   23 [32m+[m
+ AIMentalCare/CA3_AI_USE_CASE_DOCUMENTATION.md      |  203 [32m+++[m
+ .../CA3_REVIEW_2_AI_ML_MODEL_AND_DATA_REVIEW.md    |  201 [32m+++[m
+ ...W_3_APP_DEVELOPMENT_AND_FUNCTIONALITY_REVIEW.md |   97 [32m+[m
+ ...A3_REVIEW_4_UI_UX_AND_AI_OUTPUT_PRESENTATION.md |   96 [32m+[m
+ ...A3_REVIEW_5_FINAL_DEPLOYMENT_AND_DEMO_REVIEW.md |  237 [32m+++[m
+ AIMentalCare/README.md                             | 1028 [32m+++++++++++[m
+ AIMentalCare/analysis_options.yaml                 |    5 [32m+[m
+ AIMentalCare/backend_server/.env.example           |    9 [32m+[m
+ AIMentalCare/backend_server/.gitignore             |    5 [32m+[m
+ AIMentalCare/backend_server/Procfile               |    1 [32m+[m
+ AIMentalCare/backend_server/app.py                 |  479 [32m+++++[m
+ AIMentalCare/backend_server/chat_engine.py         |  619 [32m+++++++[m
+ AIMentalCare/backend_server/dataset.csv            |   27 [32m+[m
+ AIMentalCare/backend_server/nlp_engine.py          |  137 [32m++[m
+ AIMentalCare/backend_server/quiz_records.db        |  Bin [31m0[m -> [32m16384[m bytes
+ AIMentalCare/backend_server/requirements.txt       |    8 [32m+[m
+ AIMentalCare/backend_server/stress_model.pkl       |  Bin [31m0[m -> [32m9919[m bytes
+ AIMentalCare/backend_server/test_api_endpoints.py  |   35 [32m+[m
+ AIMentalCare/backend_server/test_chat.py           |  134 [32m++[m
+ AIMentalCare/backend_server/test_quiz_endpoints.py |  160 [32m++[m
+ AIMentalCare/backend_server/tfidf_vectorizer.pkl   |  Bin [31m0[m -> [32m15569[m bytes
+ AIMentalCare/backend_server/train_model.py         |  158 [32m++[m
+ AIMentalCare/build.gradle                          |   10 [32m+[m
+ AIMentalCare/build_android_app.bat                 |   10 [32m+[m
+ AIMentalCare/et                                    | 1851 [32m+++++++++++++++++++[m
+ AIMentalCare/generate_icons.py                     |  103 [32m++[m
+ AIMentalCare/gradle.properties                     |   24 [32m+[m
+ AIMentalCare/gradle/wrapper/gradle-wrapper.jar     |  Bin [31m0[m -> [32m46175[m bytes
+ .../gradle/wrapper/gradle-wrapper.properties       |    5 [32m+[m
+ AIMentalCare/gradlew                               |  248 [32m+++[m
+ AIMentalCare/gradlew.bat                           |   94 [32m+[m
+ AIMentalCare/lib/core/theme/app_colors.dart        |   37 [32m+[m
+ AIMentalCare/lib/core/theme/app_radius.dart        |   25 [32m+[m
+ AIMentalCare/lib/core/theme/app_shadows.dart       |   33 [32m+[m
+ AIMentalCare/lib/core/theme/app_spacing.dart       |   23 [32m+[m
+ AIMentalCare/lib/core/theme/app_text_styles.dart   |   87 [32m+[m
+ AIMentalCare/lib/core/theme/app_theme.dart         |  141 [32m++[m
+ AIMentalCare/lib/core/widgets/ai_chat_button.dart  |   96 [32m+[m
+ AIMentalCare/lib/core/widgets/empty_state.dart     |   55 [32m+[m
+ AIMentalCare/lib/core/widgets/error_state.dart     |   51 [32m+[m
+ AIMentalCare/lib/core/widgets/loading_state.dart   |   37 [32m+[m
+ AIMentalCare/lib/core/widgets/premium_card.dart    |   54 [32m+[m
+ AIMentalCare/lib/core/widgets/primary_button.dart  |   58 [32m+[m
+ .../lib/core/widgets/secondary_button.dart         |   49 [32m+[m
+ AIMentalCare/lib/core/widgets/section_header.dart  |   61 [32m+[m
+ AIMentalCare/lib/main.dart                         |  179 [32m++[m
+ AIMentalCare/lib/models/user_profile.dart          |  105 [32m++[m
+ .../lib/screens/ai_wellness_chat_screen.dart       |  629 [32m+++++++[m
+ .../lib/screens/auth/account_setup_screen.dart     |  419 [32m+++++[m
+ .../screens/auth/email_verification_screen.dart    |  313 [32m++++[m
+ AIMentalCare/lib/screens/auth/login_screen.dart    |  418 [32m+++++[m
+ .../screens/auth/phone_verification_screen.dart    |  467 [32m+++++[m
+ AIMentalCare/lib/screens/auth/register_screen.dart |  460 [32m+++++[m
+ AIMentalCare/lib/screens/auth/splash_screen.dart   |  160 [32m++[m
+ .../lib/screens/daily_checkin_quiz_screen.dart     |  531 [32m++++++[m
+ .../lib/screens/home_dashboard_screen.dart         |  657 [32m+++++++[m
+ .../lib/screens/journal_and_wellness_screen.dart   |  717 [32m++++++++[m
+ .../lib/screens/profile_and_settings_screen.dart   |  770 [32m++++++++[m
+ .../lib/screens/stress_insights_screen.dart        |  568 [32m++++++[m
+ AIMentalCare/lib/services/auth_service.dart        |  344 [32m++++[m
+ AIMentalCare/mentalcare_ai_flutter/.gitignore      |   48 [32m+[m
+ AIMentalCare/mentalcare_ai_flutter/.metadata       |   45 [32m+[m
+ AIMentalCare/mentalcare_ai_flutter/README.md       |   17 [32m+[m
+ .../mentalcare_ai_flutter/analysis_options.yaml    |   38 [32m+[m
+ .../mentalcare_ai_flutter/android/.gitignore       |   14 [32m+[m
+ .../android/app/build.gradle.kts                   |   59 [32m+[m
+ .../android/app/src/debug/AndroidManifest.xml      |    7 [32m+[m
+ .../android/app/src/main/AndroidManifest.xml       |   48 [32m+[m
+ .../app/mentalcare_ai_flutter/MainActivity.kt      |    5 [32m+[m
+ .../res/drawable-hdpi/ic_launcher_foreground.png   |  Bin [31m0[m -> [32m21181[m bytes
+ .../res/drawable-mdpi/ic_launcher_foreground.png   |  Bin [31m0[m -> [32m11690[m bytes
+ .../main/res/drawable-v21/launch_background.xml    |   12 [32m+[m
+ .../res/drawable-xhdpi/ic_launcher_foreground.png  |  Bin [31m0[m -> [32m31774[m bytes
+ .../res/drawable-xxhdpi/ic_launcher_foreground.png |  Bin [31m0[m -> [32m58875[m bytes
+ .../drawable-xxxhdpi/ic_launcher_foreground.png    |  Bin [31m0[m -> [32m89333[m bytes
+ .../src/main/res/drawable/launch_background.xml    |   12 [32m+[m
+ .../src/main/res/mipmap-anydpi-v26/ic_launcher.xml |    5 [32m+[m
+ .../app/src/main/res/mipmap-hdpi/ic_launcher.png   |  Bin [31m0[m -> [32m7021[m bytes
+ .../app/src/main/res/mipmap-mdpi/ic_launcher.png   |  Bin [31m0[m -> [32m3562[m bytes
+ .../app/src/main/res/mipmap-xhdpi/ic_launcher.png  |  Bin [31m0[m -> [32m10149[m bytes
+ .../app/src/main/res/mipmap-xxhdpi/ic_launcher.png |  Bin [31m0[m -> [32m18014[m bytes
+ .../src/main/res/mipmap-xxxhdpi/ic_launcher.png    |  Bin [31m0[m -> [32m27048[m bytes
+ .../app/src/main/res/values-night/styles.xml       |   18 [32m+[m
+ .../android/app/src/main/res/values/colors.xml     |    4 [32m+[m
+ .../android/app/src/main/res/values/strings.xml    |    4 [32m+[m
+ .../android/app/src/main/res/values/styles.xml     |   18 [32m+[m
+ .../android/app/src/profile/AndroidManifest.xml    |    7 [32m+[m
+ .../mentalcare_ai_flutter/android/build.gradle.kts |   24 [32m+[m
+ .../android/gradle.properties                      |   18 [32m+[m
+ .../gradle/wrapper/gradle-wrapper.properties       |    5 [32m+[m
+ .../android/settings.gradle.kts                    |   26 [32m+[m
+ .../assets/images/ic_logo.png                      |  Bin [31m0[m -> [32m116500[m bytes
+ AIMentalCare/mentalcare_ai_flutter/ios/.gitignore  |   34 [32m+[m
+ .../ios/Flutter/AppFrameworkInfo.plist             |   24 [32m+[m
+ .../ios/Flutter/Debug.xcconfig                     |    1 [32m+[m
+ .../ios/Flutter/Release.xcconfig                   |    1 [32m+[m
+ .../ios/Runner.xcodeproj/project.pbxproj           |  647 [32m+++++++[m
+ .../project.xcworkspace/contents.xcworkspacedata   |    7 [32m+[m
+ .../xcshareddata/IDEWorkspaceChecks.plist          |    8 [32m+[m
+ .../xcshareddata/WorkspaceSettings.xcsettings      |    8 [32m+[m
+ .../xcshareddata/xcschemes/Runner.xcscheme         |  119 [32m++[m
+ .../Runner.xcworkspace/contents.xcworkspacedata    |    7 [32m+[m
+ .../xcshareddata/IDEWorkspaceChecks.plist          |    8 [32m+[m
+ .../xcshareddata/WorkspaceSettings.xcsettings      |    8 [32m+[m
+ .../ios/Runner/AppD

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/txtDialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Emergency Contact"
+        android:textColor="@color/dark_green"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Add a trusted contact to reach out during mental distress or crises."
+        android:textColor="@color/text_subtle"
+        android:textSize="12sp" />
+
+    <!-- Name Input -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="Full Name *"
+        android:textColor="@color/text_dark"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etContactName"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_medical_card"
+        android:hint="e.g. Mother, Dr. Sharma, Alex"
+        android:inputType="textPersonName"
+        android:paddingHorizontal="12dp"
+        android:textColor="@color/text_dark"
+        android:textColorHint="@color/text_subtle"
+        android:textSize="14sp" />
+
+    <!-- Phone Number Input -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Phone Number *"
+        android:textColor="@color/text_dark"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etContactPhone"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_medical_card"
+        android:hint="+91 98765 43210"
+        android:inputType="phone"
+        android:paddingHorizontal="12dp"
+        android:textColor="@color/text_dark"
+        android:textColorHint="@color/text_subtle"
+        android:textSize="14sp" />
+
+    <!-- Relationship Input -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Relationship (Optional)"
+        android:textColor="@color/text_dark"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etContactRelationship"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_medical_card"
+        android:hint="e.g. Parent, Friend, Counselor, Partner"
+        android:inputType="text"
+        android:paddingHorizontal="12dp"
+        android:textColor="@color/text_dark"
+        android:textColorHint="@color/text_subtle"
+        android:textSize="14sp" />
+
+</LinearLayout>

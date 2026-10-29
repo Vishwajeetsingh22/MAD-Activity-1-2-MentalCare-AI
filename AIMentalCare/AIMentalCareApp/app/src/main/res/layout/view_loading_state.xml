@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutLoadingState"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/spacing_2xl">
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progressLoadingState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:indicatorColor="@color/primary_green"
+        app:trackColor="@color/light_mint"
+        app:trackThickness="4dp" />
+
+    <TextView
+        android:id="@+id/txtLoadingStateMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_md"
+        android:text="Loading wellness data..."
+        android:textAppearance="@style/TextAppearance.MentalCare.Caption" />
+
+</LinearLayout>

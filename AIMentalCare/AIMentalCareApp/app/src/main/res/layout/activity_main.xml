@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_mint">
+
+    <!-- Top App Bar Header with Premium Gradient -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@drawable/bg_header_gradient"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="18dp">
+
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:src="@drawable/ic_logo" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MentalCare AI"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Understand. Relax. Thrive."
+                android:textColor="#D1FAE5"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <!-- Quick Action Buttons with Modern Custom Vector Icons -->
+        <ImageButton
+            android:id="@+id/btnNavProfile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Profile"
+            android:padding="8dp"
+            android:src="@drawable/ic_nav_profile"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/btnNavAbout"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="About"
+            android:padding="8dp"
+            android:src="@drawable/ic_nav_about"
+            app:tint="@color/white" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation"
+        android:layout_below="@id/topBar" />
+
+    <!-- Premium Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_bottom_nav_floating"
+        android:elevation="8dp"
+        app:itemIconSize="22dp"
+        app:itemIconTint="@color/primary_green"
+        app:itemRippleColor="#1010B981"
+        app:itemTextColor="@color/primary_green"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <!-- Floating AI Assistant Button with Sparkle Icon & Elevation -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAiAssistant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomNavigation"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="AI Wellness Assistant"
+        android:src="@drawable/ic_sparkles"
+        app:backgroundTint="@color/ai_purple"
+        app:elevation="8dp"
+        app:fabSize="normal"
+        app:tint="@color/white" />
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Consistent Spacing Scale -->
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">12dp</dimen>
+    <dimen name="spacing_lg">16dp</dimen>
+    <dimen name="spacing_xl">20dp</dimen>
+    <dimen name="spacing_2xl">24dp</dimen>
+    <dimen name="spacing_3xl">32dp</dimen>
+
+    <!-- Consistent Card & Component Radius Scale (20–24px) -->
+    <dimen name="card_corner_radius">20dp</dimen>
+    <dimen name="card_corner_radius_lg">24dp</dimen>
+    <dimen name="button_corner_radius">12dp</dimen>
+    <dimen name="input_corner_radius">12dp</dimen>
+    <dimen name="chip_corner_radius">16dp</dimen>
+
+    <!-- Consistent Elevation / Shadows -->
+    <dimen name="elevation_none">0dp</dimen>
+    <dimen name="elevation_low">2dp</dimen>
+    <dimen name="elevation_card">3dp</dimen>
+    <dimen name="elevation_high">6dp</dimen>
+
+    <!-- Typography Text Sizes -->
+    <dimen name="text_size_display">28sp</dimen>
+    <dimen name="text_size_headline">22sp</dimen>
+    <dimen name="text_size_title">18sp</dimen>
+    <dimen name="text_size_title_small">15sp</dimen>
+    <dimen name="text_size_body">14sp</dimen>
+    <dimen name="text_size_caption">12sp</dimen>
+    <dimen name="text_size_label">11sp</dimen>
+</resources>

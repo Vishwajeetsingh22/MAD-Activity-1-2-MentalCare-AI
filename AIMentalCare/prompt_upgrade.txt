@@ -1,0 +1,1890 @@
+<USER_REQUEST>
+I want you to upgrade my EXISTING MentalCare AI project into a complete AI-powered mental wellness mobile application.
+
+IMPORTANT:
+DO NOT create a new project.
+DO NOT delete my existing CA1/CA3 implementation.
+DO NOT replace working features unnecessarily.
+
+First inspect the COMPLETE existing project and understand:
+
+- Android frontend
+- Kotlin/XML architecture
+- Existing navigation
+- Firebase
+- Authentication
+- Database
+- Existing AI/NLP model
+- Python backend
+- REST APIs
+- Stress analysis
+- Stress history
+- Stress trend
+- Recommendations
+- Notifications
+- Profile
+- Settings
+- Existing chatbot implementation
+
+Then integrate all the new functionality below into the existing application.
+
+The final application should feel like ONE complete professional application, not separate features added randomly.
+
+==================================================
+PROJECT INFORMATION
+==================================================
+
+Project:
+MentalCare AI
+
+Title:
+AI MentalCare – Real-Time AI-Powered Stress & Burnout Detection Mobile Application
+
+Group:
+11
+
+Members:
+
+1. Joylyn Princita Fernandes
+   25MCAR0099
+
+2. Syed Faizan Pasha
+   25MCAR0138
+
+3. Vishwajeet Singh
+   25MCAR0219
+
+College:
+Jain (Deemed-to-be University)
+
+Department:
+Master of Computer Applications (MCA)
+
+==================================================
+REFERENCE DESIGN / FEATURE INSPIRATION
+==================================================
+
+I have provided a 53-page reference PDF containing screenshots of a mental wellness application.
+
+Analyze the visual patterns and feature flows from the reference and adapt the USEFUL CONCEPTS to MentalCare AI.
+
+Do NOT copy:
+- Brand name
+- Logo
+- Exact text
+- Exact illustrations
+- Exact UI
+- Copyrighted content
+- Subscription/payment implementation unless specifically required
+
+Use the reference only for inspiration regarding:
+- onboarding
+- personalization
+- check-ins
+- questionnaires
+- goals
+- habits
+- sleep
+- challenges
+- daily plans
+- progress
+- insights
+- journal
+- tests
+- learning
+- profile
+- notifications
+- wellness experience
+
+==================================================
+MAIN PRODUCT VISION
+==================================================
+
+MentalCare AI should become a personalized AI wellness companion.
+
+The application should:
+
+1. Understand the user's check-ins
+2. Analyze stress indicators
+3. Track patterns over time
+4. Understand user goals and challenges
+5. Provide personalized wellness suggestions
+6. Allow natural conversation with an AI assistant
+7. Provide daily wellness activities
+8. Track progress
+9. Provide insights
+10. Provide emergency/support features
+11. Respect privacy and responsible AI principles
+
+IMPORTANT:
+
+This is a WELLNESS SUPPORT application.
+
+It must NOT claim to diagnose:
+- depression
+- anxiety disorders
+- clinical burnout
+- PTSD
+- or any other medical condition.
+
+==================================================
+PART 1 — PERSONALIZED ONBOARDING
+==================================================
+
+Create a proper onboarding flow.
+
+Do NOT force users through unnecessary screens if they already completed onboarding.
+
+Store onboarding completion for the logged-in user.
+
+Onboarding should collect useful personalization information.
+
+--------------------------------------------------
+SCREEN 1 — WELCOME
+--------------------------------------------------
+
+Show:
+
+MentalCare AI
+
+"Understand. Relax. Thrive."
+
+Short explanation:
+
+"Your AI-powered wellness companion for understanding stress, building healthy habits, and tracking your wellbeing."
+
+Buttons:
+
+[Get Started]
+
+[I Already Have an Account]
+
+--------------------------------------------------
+SCREEN 2 — PERSONALIZATION
+--------------------------------------------------
+
+Title:
+
+"Let's personalize your MentalCare experience"
+
+Subtitle:
+
+"Tell us a little about yourself so we can personalize your wellness journey."
+
+Collect only information genuinely needed for personalization.
+
+Possible fields:
+
+- Age range
+- Preferred name
+- Student / Working / Other
+- General daily routine
+
+Do NOT collect unnecessary sensitive information.
+
+--------------------------------------------------
+SCREEN 3 — YOUR WELLNESS GOALS
+--------------------------------------------------
+
+Allow multi-select.
+
+Options:
+
+- Understand my stress better
+- Improve focus
+- Improve productivity
+- Sleep better
+- Feel calmer
+- Build healthier relationships
+- Improve motivation
+- Manage daily pressure
+- Build healthier habits
+- Feel more balanced
+
+Also:
+
+[Other]
+
+Allow custom goal.
+
+Store selected goals.
+
+--------------------------------------------------
+SCREEN 4 — CURRENT CHALLENGES
+--------------------------------------------------
+
+Allow multi-select:
+
+- Academic pressure
+- Work pressure
+- Deadlines
+- Relationship concerns
+- Financial pressure
+- Sleep problems
+- Lack of motivation
+- Overthinking
+- Difficulty focusing
+- Social media usage
+- Procrastination
+- Feeling overwhelmed
+- Other
+
+Store selected challenges.
+
+--------------------------------------------------
+SCREEN 5 — HABITS
+--------------------------------------------------
+
+Ask which habits the user wants to improve.
+
+Options:
+
+- Sleep
+- Exercise
+- Screen time
+- Social media
+- Procrastination
+- Eating habits
+- Morning routine
+- Time management
+- Relaxation
+- Study/work routine
+- Other
+
+--------------------------------------------------
+SCREEN 6 — SLEEP
+--------------------------------------------------
+
+Ask simple wellness questions:
+
+- Do you wake up tired?
+- Do you wake during the night?
+- Difficulty falling asleep?
+- Irregular sleep schedule?
+- Do you generally sleep well?
+
+Use simple selectable answers.
+
+--------------------------------------------------
+SCREEN 7 — DAILY COMMITMENT
+--------------------------------------------------
+
+Ask:
+
+"How much time would you like to spend on your wellbeing each day?"
+
+Options:
+
+5 minutes
+10 minutes
+15 minutes
+20+ minutes
+
+Store the selected goal.
+
+--------------------------------------------------
+SCREEN 8 — PERSONALIZED PLAN
+--------------------------------------------------
+
+After onboarding, create a personalized plan based on actual answers.
+
+Example:
+
+"Your MentalCare plan"
+
+Daily:
+- 5-minute check-in
+- Short breathing activity
+- Focus activity
+- Reflection/journal
+- Evening wellbeing check
+
+The plan must be generated from actual user selections.
+
+Do NOT use fake personalization.
+
+==================================================
+PART 2 — DAILY CHECK-IN
+==================================================
+
+Create a structured daily check-in inspired by the reference application's questionnaire flow.
+
+Do not copy exact questions.
+
+Use wellness-oriented questions such as:
+
+1. How is your energy today?
+2. How often have you been overthinking?
+3. How easily are you getting distracted?
+4. How often have your moods changed?
+5. How overwhelmed do you feel?
+6. How difficult is it to express your emotions?
+7. How difficult is decision-making today?
+8. How motivated do you feel?
+9. How productive do you feel?
+10. How well did you sleep?
+
+Use:
+
+- 1–5 scale
+- selectable answers
+- slider where appropriate
+- emoji indicators where useful
+
+Show progress:
+
+Question 1 of 10
+Question 2 of 10
+...
+
+Allow Back and Continue.
+
+Do NOT make the questionnaire unnecessarily long.
+
+==================================================
+PART 3 — JOURNAL
+==================================================
+
+Add a proper Journal feature.
+
+User can write:
+
+"What is on your mind?"
+
+Allow:
+
+- Text entry
+- Date/time
+- Save journal
+- Edit journal
+- Delete journal
+- Search/filter if practical
+
+Journal entries should belong only to the logged-in user.
+
+Allow the AI system to optionally analyze a journal entry when the user explicitly chooses:
+
+[Analyze with AI]
+
+Do NOT automatically diagnose the user.
+
+==================================================
+PART 4 — AI STRESS ANALYSIS
+==================================================
+
+Keep the existing AI stress analysis.
+
+Flow:
+
+Check-in / Journal
+       ↓
+NLP
+       ↓
+ML Model
+       ↓
+Stress Estimation
+       ↓
+Low / Moderate / High
+       ↓
+Recommendation
+
+Use the ACTUAL model already implemented.
+
+Do NOT hardcode results.
+
+If the current model is incomplete, inspect it first.
+
+==================================================
+PART 5 — PERSONALIZED INSIGHTS
+==================================================
+
+Create an Insights screen.
+
+Show:
+
+- Current estimated stress level
+- Recent trend
+- Check-in consistency
+- Sleep-related patterns
+- Energy pattern
+- Focus pattern
+- Journal activity
+- Goal progress
+- Habit progress
+
+Example:
+
+"Your recent check-ins suggest that your stress indicators have been increasing over the last few days."
+
+Another example:
+
+"You've completed 5 check-ins this week."
+
+Important:
+
+Only display insights that are supported by actual stored data.
+
+Never fabricate statistics.
+
+If insufficient data exists, show:
+
+"Complete more check-ins to unlock personalized insights."
+
+==================================================
+PART 6 — STRESS TREND
+==================================================
+
+Keep existing stress trend functionality.
+
+Display a chart based on REAL user data.
+
+Example:
+
+Day 1 → Low
+Day 2 → Moderate
+Day 3 → Moderate
+Day 4 → High
+
+or numerical score if the existing model provides one.
+
+If insufficient data:
+
+"More check-ins are needed to identify a trend."
+
+Do NOT create fake historical data.
+
+==================================================
+PART 7 — WELLNESS GOALS
+==================================================
+
+Create:
+
+My Goals
+
+Users can:
+
+- Add goal
+- Edit goal
+- Mark goal complete
+- Delete goal
+- View progress
+
+Examples:
+
+"Sleep 7 hours regularly"
+
+"Take a 5-minute break every 2 hours"
+
+"Complete daily check-in"
+
+"Reduce late-night screen usage"
+
+Do not present these as medical treatment.
+
+==================================================
+PART 8 — DAILY PLAN
+==================================================
+
+Create:
+
+Today's Plan
+
+Example:
+
+Today's Wellness Plan
+
+✓ Complete mental check-in
+○ 5-minute breathing activity
+○ Write one journal entry
+○ Take a short break
+○ Complete evening reflection
+
+Allow users to mark activities complete.
+
+Track daily completion.
+
+Show progress:
+
+3 / 5 completed
+
+==================================================
+PART 9 — WELLNESS ACTIVITIES
+==================================================
+
+Add a wellness activity section.
+
+Categories:
+
+- Breathing
+- Relaxation
+- Focus
+- Journaling
+- Sleep routine
+- Mindfulness
+- Productivity
+- Healthy habits
+
+Each activity should have:
+
+- Title
+- Short description
+- Duration
+- Start button
+- Completion tracking
+
+Example:
+
+"5-Minute Breathing"
+
+Duration:
+5 minutes
+
+[Start]
+
+When completed:
+
+"Activity completed."
+
+==================================================
+PART 10 — AI CHATBOT
+==================================================
+
+THIS IS THE MOST IMPORTANT PART.
+
+The current chatbot is WRONG because it repeats the same message.
+
+FIX THE CHATBOT COMPLETELY.
+
+DO NOT implement a hardcoded chatbot.
+
+DO NOT create:
+
+if message contains "stress":
+return same response
+
+DO NOT repeat one predefined answer.
+
+The chatbot must behave as a REAL conversational AI assistant.
+
+==================================================
+CHATBOT REQUIREMENT
+==================================================
+
+The user should be able to talk naturally, like:
+
+User:
+"I'm feeling stressed today."
+
+AI:
+"I'm sorry you're having a difficult day. What has been making you feel stressed?"
+
+User:
+"College assignments are piling up."
+
+AI:
+"That sounds overwhelming. Which assignment or deadline is putting the most pressure on you right now?"
+
+User:
+"My project submission is tomorrow."
+
+AI:
+"That deadline sounds like the main pressure point. Would you like help breaking the project into smaller tasks for tonight?"
+
+User:
+"Yes."
+
+AI:
+"Let's make a simple plan..."
+
+The AI response MUST depend on the user's actual message and conversation context.
+
+==================================================
+CHATBOT ARCHITECTURE
+==================================================
+
+Use this architecture:
+
+Android App
+      ↓
+POST /chat
+      ↓
+Python Backend
+      ↓
+Conversation Manager
+      ↓
+AI Language Model
+      ↓
+Context + Previous Messages
+      ↓
+AI Response
+      ↓
+Android Chat UI
+
+IMPORTANT:
+
+Never expose an external AI API key inside the Android application.
+
+If an external AI provider is used:
+
+Android
+ ↓
+Your Backend
+ ↓
+AI Provider
+ ↓
+Your Backend
+ ↓
+Android
+
+==================================================
+CHAT API
+==================================================
+
+Implement:
+
+POST /chat
+
+Request:
+
+{
+  "user_id": "USER_ID",
+  "conversation_id": "CONVERSATION_ID",
+  "message": "I am feeling stressed today."
+}
+
+Response:
+
+{
+  "conversation_id": "CONVERSATION_ID",
+  "reply": "I'm here to listen. What has been making today difficult for you?"
+}
+
+The response MUST be generated based on the actual message.
+
+==================================================
+CONVERSATION MEMORY
+==================================================
+
+The chatbot must remember the current conversation.
+
+Example:
+
+User:
+"I'm stressed about exams."
+
+AI:
+"What part of the exams is worrying you most?"
+
+User:
+"Mathematics."
+
+AI:
+"Mathematics seems to be the main concern. Is it the difficulty of the topics or the amount you need to prepare?"
+
+The second response must understand that "Mathematics" refers to the previous question.
+
+Store conversation messages:
+
+conversationId
+userId
+timestamp
+role
+message
+
+Roles:
+
+user
+assistant
+
+Use a reasonable context window.
+
+Do not send unlimited conversation history to the model.
+
+==================================================
+NEW CHAT
+==================================================
+
+Add:
+
+[+ New Chat]
+
+When selected:
+
+Create a new conversation ID.
+
+Do not mix previous conversation context into the new chat.
+
+==================================================
+CHAT HISTORY
+==================================================
+
+Create:
+
+Chat History
+
+Show previous conversations.
+
+Example:
+
+Today
+- Exam stress
+- Feeling overwhelmed
+
+Yesterday
+- Sleep problems
+
+User can open a previous conversation.
+
+==================================================
+CHATBOT UI
+==================================================
+
+Create a professional chat interface.
+
+Header:
+
+AI MentalCare Assistant
+
+Subtitle:
+
+"Your wellness conversation companion"
+
+User message:
+Right aligned bubble
+
+AI:
+Left aligned bubble
+
+Input:
+
+"Talk about how you're feeling..."
+
+Send button
+
+Add typing/loading indicator:
+
+"AI is thinking..."
+
+Do not block the entire application unnecessarily.
+
+==================================================
+CHATBOT ERROR HANDLING
+==================================================
+
+If backend fails:
+
+"Sorry, I couldn't connect right now. Please try again."
+
+If network fails:
+
+"Please check your internet connection."
+
+If AI service fails:
+
+"The AI assistant is temporarily unavailable."
+
+Do NOT show the same fake response.
+
+==================================================
+CHATBOT SYSTEM BEHAVIOR
+==================================================
+
+The AI assistant should:
+
+- Listen
+- Ask relevant follow-up questions
+- Remember conversation context
+- Provide supportive responses
+- Suggest practical wellness activities
+- Help with planning
+- Help with journaling
+- Help users reflect
+- Discuss stress management
+- Discuss study/work pressure
+- Discuss sleep routines
+- Discuss focus and productivity
+- Refer to user's goals when appropriate
+
+The AI should NOT:
+
+- Diagnose mental illness
+- Claim to be a doctor
+- Prescribe medication
+- Give medical treatment
+- Claim certainty about mental health
+- Pretend to replace professionals
+
+Use language such as:
+
+"It may help..."
+"You could try..."
+"Would you like to..."
+"Based on what you've shared..."
+
+==================================================
+CHATBOT + USER DATA
+==================================================
+
+If the user has completed onboarding, the chatbot may use relevant user preferences such as:
+
+- Goals
+- Habits
+- Current stress result
+- Recent check-in summary
+
+BUT:
+
+Do not expose unnecessary personal data.
+
+Do not reveal private information from other users.
+
+Do not mix users' data.
+
+==================================================
+SAFETY HANDLING
+==================================================
+
+If the user expresses possible immediate danger or self-harm intent:
+
+Do NOT respond as a normal casual chatbot.
+
+Provide a supportive safety-oriented response.
+
+Encourage contacting:
+- trusted emergency contact
+- local emergency service
+- qualified professional/crisis support
+
+Show:
+
+[Call Emergency Contact]
+
+But NEVER automatically place a call.
+
+Require explicit user confirmation.
+
+Use the user's configured SOS/emergency contact if available.
+
+==================================================
+PART 11 — EMERGENCY CONTACTS
+==================================================
+
+Create:
+
+Emergency Contacts
+
+Users can:
+
++ Add Contact
+
+Fields:
+
+Name
+Phone Number
+Relationship
+
+Actions:
+
+Call
+Edit
+Delete
+
+Show confirmation before deletion.
+
+Store contacts per logged-in user.
+
+Example structure:
+
+users
+  └── userId
+       └── emergencyContacts
+            └── contactId
+                 ├── name
+                 ├── phone
+                 └── relationship
+
+==================================================
+PART 12 — SOS SETTINGS
+==================================================
+
+Create:
+
+SOS Settings
+
+User can:
+
+- Set SOS number
+- Change SOS number
+- Save number
+
+Validate phone number.
+
+Do not hardcode the number.
+
+When SOS is pressed:
+
+Show:
+
+"Are you sure you want to call your emergency contact?"
+
+[Cancel]
+[Call]
+
+Only call after confirmation.
+
+==================================================
+PART 13 — SETTINGS
+==================================================
+
+Create a complete Settings screen.
+
+Sections:
+
+ACCOUNT
+- Edit Profile
+
+APPEARANCE
+- Theme
+- Light
+- Dark
+- System Default
+
+SAFETY
+- SOS Settings
+- Emergency Contacts
+
+NOTIFICATIONS
+- Enable Notifications
+- Daily Check-in Reminder
+
+AI
+- AI Wellness Chat
+- Chat History
+
+ABOUT
+- About MentalCare AI
+- Privacy
+- Disclaimer
+- App Version
+
+==================================================
+PART 14 — DARK MODE / LIGHT MODE
+==================================================
+
+Implement REAL application-wide theme switching.
+
+Options:
+
+☀ Light
+🌙 Dark
+⚙ System Default
+
+Persist selected theme using DataStore or existing local persistence.
+
+The selected theme must survive app restart.
+
+Apply theme to:
+
+- Login
+- Registration
+- Dashboard
+- Check-in
+- Journal
+- AI Chatbot
+- Stress Result
+- History
+- Insights
+- Goals
+- Daily Plan
+- Activities
+- Notifications
+- Profile
+- Settings
+- Emergency Contacts
+- SOS screens
+
+Do not create unreadable dark-mode screens.
+
+==================================================
+PART 15 — NOTIFICATIONS
+==================================================
+
+Keep the existing notification system.
+
+Improve it to support:
+
+- Daily check-in reminder
+- Wellness activity reminder
+- Goal reminder
+- Personalized reminder
+- Notification preferences
+
+Allow user to enable/disable reminders.
+
+Do not spam users.
+
+==================================================
+PART 16 — PROGRESS & STREAKS
+==================================================
+
+Add simple progress tracking.
+
+Track:
+
+- Check-ins completed
+- Journal entries
+- Activities completed
+- Goals completed
+- Daily plan completion
+
+If appropriate:
+
+"3 day check-in streak"
+
+Only show streaks calculated from actual data.
+
+==================================================
+PART 17 — HOME DASHBOARD
+==================================================
+
+Redesign the dashboard so the most important features are immediately accessible.
+
+Suggested layout:
+
+------------------------------------------------
+Good Morning, [Name] 👋
+
+How are you feeling today?
+
+[😊 Great] [🙂 Good] [😐 Okay] [😟 Stressed] [😔 Low]
+
+------------------------------------------------
+
+🧠 AI Mental Check-in
+
+[Start Check-in]
+
+------------------------------------------------
+
+💬 AI Wellness Chat
+
+[Talk to AI]
+
+------------------------------------------------
+
+📊 Your Insights
+
+Stress:
+Moderate
+
+Trend:
+Improving / Stable / Increasing
+
+------------------------------------------------
+
+📋 Today's Plan
+
+3 / 5 completed
+
+------------------------------------------------
+
+🎯 Goals
+
+2 active goals
+
+------------------------------------------------
+
+🆘 Emergency Support
+
+[Emergency Contacts]
+
+------------------------------------------------
+
+Navigation:
+
+Home | AI | Insights | Notifications | Profile
+
+Do not overcrowd the screen.
+
+==================================================
+PART 18 — AI SECTION
+==================================================
+
+AI section should contain:
+
+🧠 Mental Check-in
+💬 AI Wellness Chat
+📊 AI Stress Analysis
+💡 AI Recommendations
+
+==================================================
+PART 19 — INSIGHTS SECTION
+==================================================
+
+Insights should contain:
+
+- Stress trend
+- Check-in history
+- Goal progress
+- Activity progress
+- Sleep-related self-reported patterns
+- Journal activity
+- Personalized insights
+
+Use actual user data.
+
+==================================================
+PART 20 — JOURNAL SECTION
+==================================================
+
+Create a dedicated Journal area.
+
+Features:
+
+- New Entry
+- Save
+- Edit
+- Delete
+- Search/filter if practical
+- Analyze with AI
+- Date/time
+
+Do not expose journal entries publicly.
+
+==================================================
+PART 21 — RESPONSIVE DESIGN
+==================================================
+
+Test all new screens on:
+
+- Small screen
+- Medium screen
+- Large screen
+
+Test:
+
+- Portrait
+- Keyboard open
+- Long text
+- Long chatbot responses
+- Long journal entries
+- Dark mode
+- Light mode
+
+No text clipping.
+
+No overlapping elements.
+
+No buttons outside screen.
+
+==================================================
+PART 22 — DATA SECURITY
+==================================================
+
+Because this application handles sensitive wellness information:
+
+- Use Firebase Authentication
+- Enforce user-specific database access
+- Never expose API keys in Android
+- Never upload service account private keys
+- Never hardcode passwords
+- Use HTTPS
+- Validate backend input
+- Avoid logging private journal/chat content
+- Use appropriate Firebase security rules
+
+==================================================
+PART 23 — RESPONSIBLE AI
+==================================================
+
+Add this disclaimer where appropriate:
+
+"AI responses and stress estimates are provided for general wellness support and are not medical diagnoses or a substitute for professional advice."
+
+Do not make unsupported medical claims.
+
+==================================================
+PART 24 — DO NOT USE FAKE DATA
+==================================================
+
+This is extremely important.
+
+DO NOT:
+
+- Hardcode fake stress results
+- Hardcode fake chatbot responses
+- Repeat one chatbot response
+- Create fake history
+- Create fake user statistics
+- Create fake AI confidence
+- Create fake trend data
+- Create fake model accuracy
+- Create fake personalization
+
+Everything shown as user data must come from actual stored data.
+
+==================================================
+PART 25 — CHATBOT DEBUGGING REQUIREMENT
+==================================================
+
+The existing chatbot currently repeats the same response.
+
+Before declaring the chatbot complete:
+
+1. Inspect the existing chatbot code.
+2. Identify why the same response is repeated.
+3. Remove hardcoded response logic.
+4. Verify API request is actually sent.
+5. Verify the backend receives the actual user message.
+6. Verify conversation ID is maintained.
+7. Verify previous messages are included as context.
+8. Verify the AI provider/model generates a new response.
+9. Verify the response is returned to Android.
+10. Display the returned response.
+11. Store both user and assistant messages.
+12. Test multiple different questions.
+
+Test these exact conversations:
+
+TEST 1
+
+User:
+"I'm feeling stressed today."
+
+Expected:
+Relevant response about stress.
+
+Then:
+
+User:
+"My exams are tomorrow."
+
+Expected:
+Response specifically related to exams.
+
+Then:
+
+User:
+"I haven't studied mathematics."
+
+Expected:
+Response specifically related to mathematics/exam preparation.
+
+The AI must understand the conversation context.
+
+TEST 2
+
+User:
+"I am having trouble sleeping."
+
+Then:
+
+User:
+"It happens almost every night."
+
+The second response must understand the first message.
+
+TEST 3
+
+User:
+"Can you help me make a study plan?"
+
+The AI should respond about study planning, not repeat a generic stress response.
+
+TEST 4
+
+User:
+"What can I do to relax for five minutes?"
+
+The AI should give an appropriate short wellness suggestion.
+
+If these tests fail, DO NOT mark the chatbot as complete.
+
+==================================================
+PART 26 — API CONFIGURATION
+==================================================
+
+If an external AI provider is required and the project does not currently have one configured:
+
+DO NOT invent an API key.
+
+DO NOT hardcode a fake API key.
+
+DO NOT create a fake chatbot.
+
+Instead:
+
+STOP and clearly tell me:
+
+1. Which AI provider is required
+2. Where I need to create the API key
+3. Where I need to place the key
+4. Which environment variable is required
+5. How to test the API
+
+The Android app must communicate through my backend.
+
+==================================================
+PART 27 — README
+==================================================
+
+Update README.md with all new features.
+
+Include:
+
+- Personalized onboarding
+- Goals
+- Challenges
+- Habits
+- Sleep check-in
+- Daily plan
+- Wellness activities
+- Journal
+- AI stress analysis
+- AI chatbot
+- Chat history
+- Personalized insights
+- Stress trend
+- Emergency contacts
+- SOS settings
+- Light/Dark/System theme
+- Notifications
+- Progress/streaks
+- Firebase
+- Backend
+- API
+- Deployment
+- Screenshots
+
+Add screenshot sections for:
+
+1. Onboarding
+2. Goals
+3. Challenges
+4. Daily Check-in
+5. Journal
+6. AI Stress Analysis
+7. Stress Result
+8. AI Chatbot
+9. Chat History
+10. Insights
+11. Stress Trend
+12. Daily Plan
+13. Activities
+14. Goals
+15. Settings
+16. Light Mode
+17. Dark Mode
+18. SOS Settings
+19. Emergency Contacts
+20. Notifications
+21. Profile
+
+==================================================
+PART 28 — TESTING
+==================================================
+
+Perform full regression testing.
+
+Existing:
+
+- Login
+- Registration
+- Logout
+- Dashboard
+- Firebase
+- AI stress analysis
+- History
+- Trend
+- Recommendations
+- Notifications
+
+New:
+
+- Onboarding
+- Personalization
+- Goals
+- Challenges
+- Habits
+- Sleep
+- Daily plan
+- Activities
+- Journal
+- AI chatbot
+- Chat history
+- Theme switching
+- SOS
+- Emergency contacts
+- Settings
+- Progress
+
+==================================================
+PART 29 — FINAL AUDIT
+==================================================
+
+After implementation, DO NOT simply say "done".
+
+Run a complete audit.
+
+Report:
+
+1. Features implemented
+2. Features already present
+3. Features modified
+4. Files created
+5. Files modified
+6. Database schema changes
+7. API changes
+8. AI architecture
+9. Chatbot architecture
+10. Firebase changes
+11. Testing performed
+12. Chatbot test results
+13. Known bugs
+14. Missing configuration
+15. Required API keys
+16. Required Firebase configuration
+17. Deployment readiness
+
+==================================================
+FINAL RULE
+==================================================
+
+The final MentalCare AI application should provide a complete personalized wellness experience:
+
+Onboarding
+ ↓
+Personalization
+ ↓
+Daily Check-in
+ ↓
+AI Stress Analysis
+ ↓
+Journal
+ ↓
+AI Wellness Chat
+ ↓
+Personalized Insights
+ ↓
+Goals
+ ↓
+Daily Plan
+ ↓
+Wellness Activities
+ ↓
+Progress
+ ↓
+Notifications
+ ↓
+Emergency Contacts
+ ↓
+SOS
+ ↓
+Settings
+ ↓
+Light/Dark Theme
+
+Most importantly:
+
+THE AI CHATBOT MUST BE A REAL CONTEXT-AWARE CONVERSATIONAL AI.
+
+It must NOT repeat one predefined message.
+
+It must understand what the user asks and generate a relevant answer based on the actual conversation.
+
+Do not fabricate anything.
+
+If a real AI API/model is required and unavailable, STOP and ask me for the required configuration instead of implementing a fake chatbot.                                                                                                                                                               ==================================================
+🚨 CRITICAL RULE — DO NOT REMOVE EXISTING FEATURES
+==================================================
+
+THIS IS AN ENHANCEMENT OF MY EXISTING PROJECT.
+
+DO NOT CREATE A NEW PROJECT.
+
+DO NOT DELETE, REMOVE, DISABLE, REPLACE, OR BREAK ANY
+EXISTING FEATURE FROM MY CURRENT MENTALCARE AI APPLICATION.
+
+ALL EXISTING CA1 AND CA3 FEATURES MUST REMAIN FULLY FUNCTIONAL.
+
+The new features must be ADDED ON TOP OF the existing
+application.
+
+Before making any changes:
+
+1. Scan the complete existing project.
+2. Identify every existing screen.
+3. Identify every existing feature.
+4. Identify every existing API.
+5. Identify every Firebase collection/database structure.
+6. Identify the existing AI/ML model.
+7. Identify the existing navigation.
+8. Identify the existing settings/profile functionality.
+9. Identify the existing notifications.
+10. Identify the existing stress analysis and history/trend system.
+
+Create an internal feature inventory before modifying files.
+
+==================================================
+EXISTING FEATURES THAT MUST NOT BE REMOVED
+==================================================
+
+The following existing features MUST remain:
+
+1. Splash Screen
+
+2. User Registration
+
+3. User Login
+
+4. Logout
+
+5. Home Dashboard
+
+6. User Profile
+
+7. AI Mental Check-in
+
+8. Journal / Mental Check-in Text Input
+
+9. AI/NLP Stress Analysis
+
+10. Stress Classification:
+    - Low
+    - Moderate
+    - High
+
+11. Stress Result Screen
+
+12. Stress History
+
+13. Stress Trend Analysis
+
+14. Increasing Stress Pattern Detection
+
+15. Personalized Recommendations
+
+16. Firebase Authentication
+
+17. Firebase Database / Firestore / Realtime Database
+    according to the existing implementation
+
+18. Notifications
+
+19. Responsive Android UI
+
+20. Existing navigation
+
+21. Existing Android UI theme/design
+
+22. Existing Python Flask/FastAPI backend
+
+23. Existing REST APIs
+
+24. Existing ML/NLP model
+
+25. Existing model prediction functionality
+
+26. Existing AI disclaimer/wellness disclaimer
+
+27. Existing trusted support/emergency functionality,
+    if already implemented
+
+28. Existing GitHub/deployment configuration
+
+29. Existing CA1 functionality
+
+30. Existing CA3 functionality
+
+==================================================
+NON-DESTRUCTIVE DEVELOPMENT RULE
+==================================================
+
+Before editing any file:
+
+- Read the file.
+- Understand its purpose.
+- Check whether it is used by another feature.
+- Preserve existing functionality.
+- Modify only what is necessary.
+
+Do NOT rewrite the whole application just to add a feature.
+
+Do NOT replace existing screens when an existing screen can
+simply be enhanced.
+
+Do NOT create duplicate versions of existing functionality.
+
+For example:
+
+If Profile already exists:
+    enhance Profile.
+
+Do NOT create:
+    ProfileNew
+
+If Settings already exists:
+    enhance Settings.
+
+Do NOT create:
+    SettingsNew
+
+If AI Check-in already exists:
+    improve/enhance it.
+
+Do NOT create a second AI Check-in system.
+
+If the existing chatbot exists:
+    DEBUG and FIX the existing chatbot.
+
+Do NOT remove it and create a fake replacement.
+
+==================================================
+BACKWARD COMPATIBILITY
+==================================================
+
+Every existing user flow must continue working.
+
+Example:
+
+Login
+ ↓
+Existing Home Dashboard
+ ↓
+Existing AI Check-in
+ ↓
+Existing AI Stress Analysis
+ ↓
+Existing Stress Result
+ ↓
+Existing History
+ ↓
+Existing Trend
+ ↓
+Existing Recommendations
+
+This complete flow MUST continue working.
+
+New features should be integrated around this flow.
+
+==================================================
+NEW FEATURES ARE ADDITIVE
+==================================================
+
+Add the new features WITHOUT removing old ones:
+
+- Personalized onboarding
+- Wellness goals
+- Challenges
+- Habit tracking
+- Sleep check-in
+- Daily plan
+- Wellness activities
+- Journal enhancements
+- Personalized insights
+- AI Wellness Chatbot
+- Real conversation
+- Conversation history
+- Emergency Contacts
+- SOS Settings
+- Light Mode
+- Dark Mode
+- System Theme
+- Enhanced Settings
+- Progress/Streaks
+- Improved notifications
+
+These are ADDITIONS.
+
+They must NOT replace existing CA1/CA3 functionality.
+
+==================================================
+DATABASE SAFETY
+==================================================
+
+Do NOT delete existing Firebase collections.
+
+Do NOT rename existing collections unless absolutely necessary.
+
+Do NOT delete existing fields.
+
+If new data is required:
+
+ADD new collections/fields while preserving existing data.
+
+Before changing database structure:
+
+Inspect the existing structure.
+
+Maintain backward compatibility with existing users/data.
+
+==================================================
+API SAFETY
+==================================================
+
+Do NOT remove existing API endpoints.
+
+If a new API is required, ADD it.
+
+For example:
+
+Existing:
+POST /predict
+
+Keep it.
+
+New:
+POST /chat
+
+Add it.
+
+Do NOT replace:
+
+/predict
+
+with:
+
+/chat
+
+Both must work independently.
+
+==================================================
+AI MODEL SAFETY
+==================================================
+
+Do NOT remove or replace the existing stress classification model
+unless there is a technical reason and I explicitly approve it.
+
+The existing:
+
+NLP
++
+ML
++
+Stress Classification
+
+must continue working.
+
+The chatbot is an ADDITION to the existing AI stress analysis.
+
+They are two separate AI capabilities:
+
+1. Stress Analysis
+2. Conversational AI Chatbot
+
+==================================================
+NAVIGATION SAFETY
+==================================================
+
+Do NOT remove existing navigation items.
+
+Instead, integrate new items.
+
+Existing:
+
+Home
+AI Check-in
+Insights
+Notifications
+Profile
+
+can be enhanced with:
+
+AI:
+- Mental Check-in
+- AI Chatbot
+
+Profile:
+- Settings
+- Emergency Contacts
+- SOS
+
+Insights:
+- Stress Trend
+- Goals
+- Progress
+- Personalized Insights
+
+==================================================
+UI SAFETY
+==================================================
+
+Preserve the existing MentalCare AI visual identity.
+
+Do not completely redesign existing screens unless necessary.
+
+New screens should follow the same design system.
+
+Existing green theme must remain available.
+
+Light/Dark mode is an additional capability.
+
+==================================================
+REGRESSION TESTING
+==================================================
+
+After implementing EVERY new feature, test the existing features.
+
+Before declaring the task complete, verify:
+
+✓ Registration
+✓ Login
+✓ Logout
+✓ Dashboard
+✓ AI Check-in
+✓ AI Stress Analysis
+✓ Low/Moderate/High result
+✓ Stress History
+✓ Stress Trend
+✓ Increasing Stress Pattern
+✓ Recommendations
+✓ Firebase
+✓ Notifications
+✓ Profile
+✓ Existing navigation
+✓ Existing backend
+✓ Existing APIs
+
+Then test new features:
+
+✓ Onboarding
+✓ Goals
+✓ Challenges
+✓ Habits
+✓ Sleep
+✓ Daily Plan
+✓ Wellness Activities
+✓ Journal
+✓ AI Chatbot
+✓ Chat History
+✓ Settings
+✓ Light Mode
+✓ Dark Mode
+✓ SOS
+✓ Emergency Contacts
+✓ Progress
+
+==================================================
+FINAL REQUIREMENT
+==================================================
+
+The final application must be:
+
+EXISTING MENTALCARE AI
++
+NEW FEATURES
+
+NOT:
+
+NEW APPLICATION REPLACING MENTALCARE AI.
+
+If any proposed change would remove or break an existing feature,
+STOP and explain the conflict to me before making that change.
+
+Never silently remove functionality.
+Never silently replace working functionality.
+Never delete existing user data.                            now excute the both prompt 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-29T09:41:56+05:30.
+</ADDITIONAL_METADATA>

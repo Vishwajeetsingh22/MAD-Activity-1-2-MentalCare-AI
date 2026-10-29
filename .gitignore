@@ -1,0 +1,36 @@
+.gradle/
+.idea/caches/
+**/build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Signing keys and release artifacts
+*.jks
+*.keystore
+**/app/release/
+*.apk
+*.aab
+
+# Local databases and secrets
+*.db
+*.sqlite
+*.sqlite3
+.env
+.env.*
+!.env.example
+
+# Build files and caches
+.gradle/
+**/build/
+.dart_tool/
+.venv/
+venv/
+__pycache__/

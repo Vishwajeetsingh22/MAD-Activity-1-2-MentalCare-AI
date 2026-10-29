@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Premium Brand Green Dark Palette -->
+    <color name="primary_green">#10B981</color>
+    <color name="dark_green">#34D399</color>
+    <color name="deep_forest">#022C22</color>
+    <color name="mint">#0B132B</color>
+    <color name="light_mint">#064E3B</color>
+    <color name="background_mint">#0B132B</color>
+
+    <!-- AI Accent (Dark Mode) -->
+    <color name="ai_purple">#A78BFA</color>
+    <color name="ai_purple_light">#2E1065</color>
+    <color name="ai_purple_dark">#C4B5FD</color>
+    <color name="ai_glow">#4C1D95</color>
+
+    <!-- Status & Stress Indicators (Dark Mode) -->
+    <color name="color_moderate">#FBBF24</color>
+    <color name="color_high">#F87171</color>
+    <color name="stress_low">#34D399</color>
+    <color name="stress_low_bg">#064E3B</color>
+    <color name="stress_moderate">#FBBF24</color>
+    <color name="moderate_stress">#FBBF24</color>
+    <color name="stress_moderate_bg">#451A03</color>
+    <color name="stress_high">#F87171</color>
+    <color name="high_stress">#F87171</color>
+    <color name="stress_high_bg">#450A0A</color>
+    <color name="stress_critical">#EF4444</color>
+    <color name="stress_critical_bg">#5F0B0B</color>
+    <color name="alert_banner_red">#F87171</color>
+
+    <!-- Premium Neutrals (Dark Mode) -->
+    <color name="white">#FFFFFF</color>
+    <color name="main_text">#F8FAFC</color>
+    <color name="secondary_text">#94A3B8</color>
+    <color name="text_dark">#F8FAFC</color>
+    <color name="text_subtle">#94A3B8</color>
+    <color name="light_background">#0B132B</color>
+    <color name="divider_color">#1E293B</color>
+    <color name="card_border">#1E293B</color>
+    <color name="card_background">#172136</color>
+
+    <!-- Dark Mode Tokens -->
+    <color name="dark_background">#0B132B</color>
+    <color name="dark_surface">#172136</color>
+    <color name="dark_secondary_text">#94A3B8</color>
+
+    <!-- Backward Compatibility Aliases -->
+    <color name="primary_teal">#10B981</color>
+    <color name="primary_teal_dark">#34D399</color>
+    <color name="primary_teal_light">#064E3B</color>
+    <color name="teal_soft_bg">#064E3B</color>
+</resources>

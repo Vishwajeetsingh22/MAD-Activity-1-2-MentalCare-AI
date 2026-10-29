@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_mint"
+    android:fitsSystemWindows="true">
+
+    <!-- Top Header & Step Progress Bar -->
+    <LinearLayout
+        android:id="@+id/layoutStepProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btnStepBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_back_arrow"
+                app:tint="@color/primary_green"
+                android:contentDescription="Back" />
+
+            <TextView
+                android:id="@+id/txtStepCounter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Step 2 of 8"
+                android:textAlignment="center"
+                android:textColor="@color/dark_green"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+        </LinearLayout>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressBarSteps"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_marginTop="8dp"
+            android:max="8"
+            android:progress="2"
+            app:indicatorColor="@color/primary_green"
+            app:trackColor="@color/card_border"
+            app:trackCornerRadius="4dp" />
+    </LinearLayout>
+
+    <!-- Scrollable Content View for Steps -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:padding="20dp">
+
+        <FrameLayout
+            android:id="@+id/containerSteps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- STEP 1: WELCOME SCREEN -->
+            <LinearLayout
+                android:id="@+id/step1Welcome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_logo"
+                    android:background="@drawable/bg_medical_card"
+                    android:padding="8dp"
+                    android:contentDescription="Logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="MentalCare AI"
+                    android:textColor="@color/text_dark"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Understand. Relax. Thrive."
+                    android:textColor="@color/primary_green"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Your AI-powered wellness companion for understanding stress, building healthy habits, and tracking your wellbeing."
+                    android:textColor="@color/text_subtle"
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:lineSpacingExtra="4dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnWelcomeGetStarted"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="40dp"
+                    android:text="Get Started"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/primary_green"
+                    app:cornerRadius="12dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnWelcomeLogin"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="12dp"
+                    android:text="I Already Have an Account"
+                    android:textColor="@color/dark_green"
+                    android:textSize="15sp"
+                    app:strokeColor="@color/primary_green"
+                    app:cornerRadius="12dp" />
+            </LinearLayout>
+
+            <!-- STEP 2: PERSONALIZATION -->
+            <LinearLayout
+                android:id="@+id/step2Personalization"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Let's personalize your experience"
+                    android:textColor="@color/text_dark"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Tell us a little about yourself so we can personalize your wellness journey."
+                    android:textColor="@color/text_subtle"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:hint="Preferred Name"
+                    app:boxBackgroundColor="@color/card_background"
+                    app:boxStrokeColor="@color/primary_green">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etOnboardingName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_dark" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Age Range"
+                    android:textColor="@color/text_dark"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:singleSelection="true">
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipAge1824"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="18 - 24"
+                        android:checked="true" />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipAge2534"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="25 - 34" />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipAge3544"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="35 - 44" />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipAge45Plus"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="45+" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Current Role / Occupation"
+                    android:textColor="@color/text_dark"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupOccupation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:singleSelection="true">
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipRoleStudent"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Student"
+                        android:checked="true" />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipRoleWorking"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Working Professional" />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipRoleOther"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Other" />
+                </com.google.android.material.chip.ChipGroup>
+            </LinearLayout>
+
+            <!-- STEP 3: WELLNESS GOALS -->
+            <LinearLayout
+                android:id="@+id/step3Goals"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Wellness Goals"
+                    android:textColor="@color/text_dark"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Select the areas you want to focus on (Choose one or more):"
+                    android:textColor="@color/text_subtle"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupGoals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Understand my stress better"
+                        android:checked="true" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Improve focus" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Improve productivity" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sleep better"
+                        android:checked="true" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Feel calmer" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Build healthier relationships" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Improve motivation" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Manage daily pressure"
+                        android:checked="true" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Build healthier habits" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Feel more balanced" />
+                </com.google.android.material.chip.ChipGroup>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Other custom goal (optional)"
+                    app:boxBackgroundColor="@color/card_background"
+                    app:boxStrokeColor="@color/primary_green">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etCustomGoal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_dark" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!-- STEP 4: CURRENT CHALLENGES -->
+            <LinearLayout
+                android:id="@+id/step4Challenges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Challenges"
+                    android:textColor="@color/text_dark"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="What is putting pressure on your mental wellness right now?"
+                    android:textColor="@color/text_subtle"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupChallenges"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Academic pressure"
+                        android:checked="true" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Work pressure" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Upcoming deadlines"
+                        android:checked="true" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Relationship concerns" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Financial pressure" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sleep problems" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lack of motivation" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Overthinking"
+                        android:checked="true" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Difficulty focusing" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Social media usage" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Procrastination" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Feeling overwhelmed" />
+                </com.google.android.material.chip.ChipGroup>
+            </LinearLayout>
+
+            <!-- STEP 5: HABITS TO IMPROVE -->
+            <LinearLayout
+                android:id="@+id/step5Habits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Habits to Improve"
+                    android:textColor="@color/text_dark"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Which healthy routines do you want to build?"
+                    android:textColor="@color/text_subtle"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupHabits"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sleep Routine"
+                        android:checked="true" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Daily Exercise" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Screen Time Limit"
+                        android:checked="true" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mindful Relaxation"
+                        android:checked="true" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Morning Routine" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Time Management" />
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Study/Work Pacing" />
+                </com.google.android.material.chip.ChipGroup>
+            </LinearLayout>
+
+            <!-- STEP 6: SLEEP WELLNESS -->
+            <LinearLayout
+                android:id="@+id/step6Sleep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sleep Wellbeing"
+                    android:textColor="@color/text_dark"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Select what best describes your typical sleep pattern:"
+                    android:textColor="@color/text_subtle"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupSleep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:singleSelection="true">
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipSleepWell"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="I generally sleep well (7-8 hours)" />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipSleepTired"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="I often wake up feeling tired"
+                        android:checked="true" />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipSleepWakeNight"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="I wake up multiple times during the night" />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipSleepFallingAsleep"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="I have difficulty falling asleep (racing mind)" />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipSleepIrregular"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="My sleep schedule is irregular" />
+                </com.google.android.material.chip.ChipGroup>
+            </LinearLayout>
+
+            <!-- STEP 7: DAILY COMMITMENT -->
+            <LinearLayout
+                android:id="@+id/step7Commitment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daily Commitment"
+                    android:textColor="@color/text_dark"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="How much time would you like to spend on your wellbeing each day?"
+                    android:textColor="@color/text_subtle"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupCommitment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:singleSelection="true">
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipTime5m"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="5 Minutes (Quick check-in &amp; breathing)" />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipTime10m"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="10 Minutes (Recommended: check-in, breathing, journal)"
+                        android:checked="true" />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipTime15m"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="15 Minutes (Full mindful wellness routine)" />
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipTime20mPlus"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="20+ Minutes (Deep meditation &amp; focus blocks)" />
+                </com.google.android.material.chip.ChipGroup>
+            </LinearLayout>
+
+            <!-- STEP 8: PERSONALIZED PLAN -->
+            <LinearLayout
+                android:id="@+id/step8Plan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your MentalCare Plan"
+                    android:textColor="@color/text_dark"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Generated specifically from your goals, challenges, and daily commitment:"
+                    android:textColor="@color/text_subtle"
+                    android:textSize="14sp" />
+
+                <!-- Generated Plan Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardBackgroundColor="@color/card_background"
+                    app:strokeColor="@color/primary_green"
+                    app:strokeWidth="1.5dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🗓️ Daily Recommended Routine"
+                            android:textColor="@color/dark_green"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtPlanSummary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="• Morning: 5-minute mental check-in\n• Afternoon: Short 5-minute box breathing\n• Evening: Reflection &amp; gratitude journal\n• Night: Gentle screen-free wind-down"
+                            android:textColor="@color/text_dark"
+                            android:textSize="14sp"
+                            android:lineSpacingExtra="6dp" />
+
+                        <TextView
+                            android:id="@+id/txtPlanGoalsSummary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Primary Goal: Understand stress &amp; sleep better"
+                            android:textColor="@color/primary_green"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="MentalCare AI will adapt your daily plan and insights based on your real check-in data."
+                    android:textColor="@color/text_subtle"
+                    android:textSize="12sp"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+        </FrameLayout>
+    </ScrollView>
+
+    <!-- Bottom Action Button for Step Flow -->
+    <LinearLayout
+        android:id="@+id/layoutBottomStepNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@color/card_background"
+        android:visibility="gone">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStepNext"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="Continue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/primary_green"
+            app:cornerRadius="12dp" />
+    </LinearLayout>
+
+</LinearLayout>

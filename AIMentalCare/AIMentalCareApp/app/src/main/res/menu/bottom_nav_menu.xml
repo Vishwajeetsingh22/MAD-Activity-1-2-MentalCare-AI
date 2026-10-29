@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_dashboard"
+        android:icon="@drawable/ic_nav_dashboard"
+        android:title="Dashboard" />
+    <item
+        android:id="@+id/nav_checkin"
+        android:icon="@drawable/ic_nav_checkin"
+        android:title="AI Check-in" />
+    <item
+        android:id="@+id/nav_analytics"
+        android:icon="@drawable/ic_nav_analytics"
+        android:title="Analytics" />
+    <item
+        android:id="@+id/nav_lifestyle"
+        android:icon="@drawable/ic_nav_lifestyle"
+        android:title="Lifestyle" />
+    <item
+        android:id="@+id/nav_support"
+        android:icon="@drawable/ic_nav_support"
+        android:title="Support" />
+</menu>

@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_background"
+    android:padding="16dp">
+
+    <!-- Top App Bar / Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp">
+
+        <ImageButton
+            android:id="@+id/btnCheckInBack"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_back_arrow"
+            app:tint="@color/primary_green"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:id="@+id/txtHeaderTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Daily Check-in"
+            android:textColor="@color/main_text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAlignment="center" />
+
+        <View
+            android:layout_width="44dp"
+            android:layout_height="44dp" />
+    </LinearLayout>
+
+    <!-- Progress Indicator Section -->
+    <LinearLayout
+        android:id="@+id/layoutQuestionProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txtQuestionCounter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Question 1 of 5"
+                android:textColor="@color/primary_green"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtQuestionStepType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily Wellness Assessment"
+                android:textColor="@color/secondary_text"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressBarQuestions"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginTop="8dp"
+            android:max="5"
+            android:progress="1"
+            app:indicatorColor="@color/primary_green"
+            app:trackColor="@color/card_border"
+            app:trackCornerRadius="4dp" />
+    </LinearLayout>
+
+    <!-- Question Container with ScrollView -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollQuestionContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardQuestion"
+            style="@style/Widget.MentalCare.Card.Premium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/card_corner_radius">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/txtQuestionCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CURRENT MOOD"
+                    android:textAppearance="@style/TextAppearance.MentalCare.Label" />
+
+                <TextView
+                    android:id="@+id/txtQuestionTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="How are you feeling today?"
+                    android:textAppearance="@style/TextAppearance.MentalCare.Headline"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/txtQuestionSubtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Select the option that best reflects your emotional state"
+                    android:textAppearance="@style/TextAppearance.MentalCare.Subtitle" />
+
+                <!-- Mode A: Mood Selection (Question 1) -->
+                <LinearLayout
+                    android:id="@+id/layoutMoodChips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    android:visibility="visible">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMood1"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="😊  Great"
+                        android:textColor="@color/main_text"
+                        android:textSize="15sp"
+                        android:textAlignment="viewStart"
+                        app:strokeColor="@color/card_border"
+                        app:cornerRadius="14dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMood2"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="10dp"
+                        android:text="🙂  Good"
+                        android:textColor="@color/main_text"
+                        android:textSize="15sp"
+                        android:textAlignment="viewStart"
+                        app:strokeColor="@color/card_border"
+                        app:cornerRadius="14dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMood3"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="10dp"
+                        android:text="😐  Okay"
+                        android:textColor="@color/main_text"
+                        android:textSize="15sp"
+                        android:textAlignment="viewStart"
+                        app:strokeColor="@color/card_border"
+                        app:cornerRadius="14dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMood4"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="10dp"
+                        android:text="😟  Low"
+                        android:textColor="@color/main_text"
+                        android:textSize="15sp"
+                        android:textAlignment="viewStart"
+                        app:strokeColor="@color/card_border"
+                        app:cornerRadius="14dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMood5"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="10dp"
+                        android:text="😣  Difficult"
+                        android:textColor="@color/main_text"
+                        android:textSize="15sp"
+                        android:textAlignment="viewStart"
+                        app:strokeColor="@color/card_border"
+                        app:cornerRadius="14dp" />
+                </LinearLayout>
+
+                <!-- Mode B: Rating Scale 1 to 5 (Questions 2 to 5) -->
+                <LinearLayout
+                    android:id="@+id/layoutRatingScale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnRating1"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="1 - Very Low"
+                        android:textColor="@color/main_text"
+                        android:textSize="15sp"
+                        android:textAlignment="viewStart"
+                        app:strokeColor="@color/card_border"
+                        app:cornerRadius="14dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnRating2"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="10dp"
+                        android:text="2 - Low"
+                        android:textColor="@color/main_text"
+                        android:textSize="15sp"
+                        android:textAlignment="viewStart"
+                        app:strokeColor="@color/card_border"
+                        app:cornerRadius="14dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnRating3"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="10dp"
+                        android:text="3 - Moderate"
+                        android:textColor="@color/main_text"
+                        android:textSize="15sp"
+                        android:textAlignment="viewStart"
+                        app:strokeColor="@color/card_border"
+                        app:cornerRadius="14dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnRating4"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="10dp"
+                        android:text="4 - High"
+                        android:textColor="@color/main_text"
+                        android:textSize="15sp"
+                        android:textAlignment="viewStart"
+                        app:strokeColor="@color/card_border"
+                        app:cornerRadius="14dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnRating5"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="10dp"
+                        android:text="5 - Very High"
+                        android:textColor="@color/main_text"
+                        android:textSize="15sp"
+                        android:textAlignment="viewStart"
+                        app:strokeColor="@color/card_border"
+                        app:cornerRadius="14dp" />
+                </LinearLayout>
+
+                <!-- Mode C: Optional Reflection & Journal Integration (On Question 5) -->
+                <LinearLayout
+                    android:id="@+id/layoutReflection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Daily Reflection (Optional)"
+                        android:textAppearance="@style/TextAppearance.MentalCare.TitleSmall" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilReflection"
+                        style="@style/Widget.MentalCare.TextInputLayout.Outlined"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:hint="Type thoughts or what's troubling you...">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editReflectionText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top|start"
+                            android:minLines="3"
+                            android:maxLines="6"
+                            android:inputType="textMultiLine|textCapSentences"
+                            android:textColor="@color/main_text"
+                            android:textSize="14sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cbSaveToJournal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Save this reflection into my private Wellness Journal"
+                        android:textColor="@color/main_text"
+                        android:textSize="13sp"
+                        app:buttonTint="@color/primary_green"
+                        android:checked="true" />
+
+                    <!-- AI NLP Note -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:cardBackgroundColor="@color/ai_purple_light"
+                        app:strokeColor="@color/ai_purple"
+                        app:strokeWidth="1dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:padding="12dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="✨"
+                                android:textSize="18sp"
+                                android:layout_marginEnd="10dp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Our AI NLP model analyzes your words to personalize your care recommendations."
+                                android:textColor="@color/ai_purple_dark"
+                                android:textSize="12sp"
+                                android:lineSpacingExtra="2dp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Question Navigation Buttons -->
+    <LinearLayout
+        android:id="@+id/layoutQuestionButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPrevQuestion"
+            style="@style/Widget.MentalCare.Button.Secondary"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:text="Previous"
+            android:enabled="false" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNextQuestion"
+            style="@style/Widget.MentalCare.Button.Primary"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1.3"
+            android:layout_marginStart="6dp"
+            android:text="Continue" />
+    </LinearLayout>
+
+    <!-- Result / Completed Container (Shown after completion or when already completed today) -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/layoutCheckInResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingVertical="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✓"
+                android:textColor="@color/primary_green"
+                android:textSize="48sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtCheckInResultTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="✓ Check-in completed"
+                android:textAppearance="@style/TextAppearance.MentalCare.Headline"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/txtCheckInResultSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Your wellness check-in has been\nsaved for today."
+                android:textAppearance="@style/TextAppearance.MentalCare.Subtitle"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/txtCheckInCompletedDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Today • Smart Wellness Assessment"
+                android:textColor="@color/primary_green"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textAlignment="center" />
+
+            <!-- Stress Result Card -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.MentalCare.Card.Premium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:strokeColor="@color/primary_green"
+                app:strokeWidth="1.5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/txtResultStressLevel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MODERATE STRESS"
+                        android:textColor="@color/moderate_stress"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtResultScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Estimated Stress Score: 48/100"
+                        android:textColor="@color/main_text"
+                        android:textSize="15sp" />
+
+                    <!-- Journal Saved Indicator -->
+                    <TextView
+                        android:id="@+id/txtResultJournalSaved"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="📝 Reflection saved to your Wellness Journal"
+                        android:textColor="@color/dark_green"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <!-- NLP Key Indicators Identified -->
+                    <TextView
+                        android:id="@+id/txtResultNlpIndicators"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Key indicators: Mental fatigue, Balanced mood"
+                        android:textColor="@color/ai_purple_dark"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txtResultRecommendation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="Recommendation: Practice 5-minute Box Breathing and schedule a short hydration break away from screens."
+                        android:textAppearance="@style/TextAppearance.MentalCare.Body"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="AI stress estimates are provided for general wellness support and are not medical diagnoses."
+                        android:textAppearance="@style/TextAppearance.MentalCare.Caption"
+                        android:textAlignment="center" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Primary Action: View Insights -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnViewTrends"
+                style="@style/Widget.MentalCare.Button.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="20dp"
+                android:text="View Insights" />
+
+            <!-- Secondary Action: Return to Dashboard -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCheckInDone"
+                style="@style/Widget.MentalCare.Button.Secondary"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="10dp"
+                android:text="Return to Dashboard" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

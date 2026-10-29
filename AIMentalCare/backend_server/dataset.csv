@@ -1,0 +1,27 @@
+text,label,stress_level
+I had a wonderful relaxing day at the park today.,0,LOW
+"Feeling calm, peaceful, and refreshed after a good night sleep.",0,LOW
+Finished my tasks early and spent time with family.,0,LOW
+Everything is under control. Feeling productive and cheerful.,0,LOW
+Enjoyed a nice cup of tea and listened to music.,0,LOW
+I feel relaxed today and happy with my progress.,0,LOW
+Great workout this morning! Ready for a light workday.,0,LOW
+I am slightly worried about tomorrow's project presentation.,1,MODERATE
+"Lots of assignments due this week, feeling a bit rushed.",1,MODERATE
+I can't concentrate easily today because of noise.,1,MODERATE
+"Had a tight deadline today, but managed to submit on time.",1,MODERATE
+"Work is getting busy, need to prioritize my schedule better.",1,MODERATE
+Feeling slightly tense after a long meeting with managers.,1,MODERATE
+"Not enough sleep last night, feeling mild headache.",1,MODERATE
+I have been working continuously for the last few days. I can't sleep properly and I feel exhausted.,2,HIGH
+I am completely exhausted. Work pressure is destroying my mood.,2,HIGH
+I haven't been sleeping well and I feel overwhelmed by everything.,2,HIGH
+Today was really stressful. I had three deadlines and couldn't focus.,2,HIGH
+Too many demands from boss. I am burning out and feel constant anxiety.,2,HIGH
+"Heart racing, constant deadlines, sleeping only 3 hours per night.",2,HIGH
+"My head hurts, work load is overwhelming, I feel hopeless and tired.",2,HIGH
+"I feel completely trapped, unable to cope, and I am breaking down.",2,HIGH
+"I can't handle this anymore, extreme crisis, total emotional breakdown.",2,HIGH
+"Severe panicking, cannot function, feeling like giving up completely.",2,HIGH
+"Intense mental agony, total exhaustion, I need emergency support now.",2,HIGH
+I am completely overwhelmed and having severe panic attacks daily.,2,HIGH

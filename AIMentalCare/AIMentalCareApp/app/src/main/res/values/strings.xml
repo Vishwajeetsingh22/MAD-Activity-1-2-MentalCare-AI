@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MentalCare AI</string>
+    <string name="tagline">Understand. Relax. Thrive.</string>
+    <string name="slogan">Understand. Relax. Thrive.</string>
+    <string name="disclaimer_notice">MentalCare AI is a wellness and early-warning support system, not a medical diagnostic application. It does not diagnose clinical depression, anxiety, or other medical conditions.</string>
+
+    <!-- Team Members -->
+    <string name="team_member_1">Joylyn Princita Fernandes (25MCAR0099)</string>
+    <string name="team_member_2">Syed Faizan Pasha (25MCAR0138)</string>
+    <string name="team_member_3">Vishwajeet Singh (25MCAR0219)</string>
+
+    <!-- UI Strings referenced by Kotlin code -->
+    <string name="avg_7_day_format">7-Day Avg: %1$d%%</string>
+    <string name="burnout_notification_title">🔔 Burnout Warning</string>
+    <string name="burnout_notification_message">Your stress indicators have remained high for several days. Consider reducing workload and seeking support.</string>
+    <string name="risk_format">%1$s RISK</string>
+    <string name="checkin_empty_error">Please enter text for your check-in</string>
+    <string name="high_stress_notification_title">⚠️ High Stress Alert</string>
+    <string name="high_stress_notification_message_format">Elevated stress indicators detected (%1$s - %2$d%%). Take a relaxation break.</string>
+    <string name="confidence_format">Confidence: %1$d%%</string>
+    <string name="result_level_format">%1$s (%2$d%%)</string>
+    <string name="stress_percent_format">%1$d%%</string>
+    <string name="high_stress_alert_title">⚠️ High Stress Indicators Detected</string>
+    <string name="high_stress_alert_message_format">Indicators: %1$s. Action: %2$s</string>
+    <string name="sleep_hrs_format">%1$.1f hrs</string>
+    <string name="mood_state_format">%1$s State</string>
+    <string name="lifestyle_risk_format">Multi-Factor Stress Risk: %1$d%%</string>
+    <string name="low_sleep_factor">• Low sleep duration (%1$.1f hrs) increases exhaustion\n</string>
+    <string name="high_work_factor">• Prolonged work hours (%1$.1f hrs) causes high mental fatigue\n</string>
+    <string name="low_exercise_factor">• Low physical activity (%1$d mins) reduces stress recovery\n</string>
+    <string name="healthy_lifestyle">• Healthy lifestyle balance maintained!</string>
+    <string name="lifestyle_logged">Lifestyle factors logged!</string>
+    <string name="login_empty_error">Please fill in email and password</string>
+    <string name="welcome_back_format">Welcome back, %1$s</string>
+    <string name="register_empty_error">Please fill in all registration fields</string>
+    <string name="register_success">Account created successfully!</string>
+    <string name="notifying_contact">Notifying your pre-configured trusted contact...</string>
+    <string name="stop_exercise">Stop Exercise</string>
+    <string name="inhale_phase">Inhale Deeply (4s)...</string>
+    <string name="hold_breath_phase">Hold Breath (4s)...</string>
+    <string name="exhale_phase">Exhale Slowly (4s)...</string>
+    <string name="hold_empty_phase">Hold Empty (4s)...</string>
+    <string name="timer_format">%1$02d:%2$02d</string>
+    <string name="exercise_complete">Exercise Complete! Well done 🌿</string>
+    <string name="start_breathing">Start Breathing</string>
+
+    <!-- CA3 AI Strings -->
+    <string name="ai_analyzing_state">⏳ Analyzing with AI NLP Engine…</string>
+    <string name="perform_ai_analysis">🤖 Perform AI Stress Analysis</string>
+    <string name="ai_disclaimer_title">🛡️ Responsible AI &amp; Wellness Disclaimer</string>
+    <string name="ai_disclaimer_text">MentalCare AI is an assistive wellness and early-warning support tool powered by NLP and Machine Learning. It does not provide medical, psychological, or psychiatric diagnosis. If you are experiencing severe distress or a mental health crisis, please consult a qualified healthcare professional or utilize the Support section immediately.</string>
+    <string name="ai_transparency_note">Model: TF-IDF + Logistic Regression / Embedded NLP Engine. Data is processed securely for wellness analysis.</string>
+
+    <!-- Review 3 Strings -->
+    <string name="more_checkins_needed">More check-ins are needed to identify a trend.</string>
+    <string name="ai_loading_state">Analyzing your check-in…</string>
+    <string name="ai_success_msg">Analysis completed</string>
+    <string name="ai_network_error">Unable to connect to the AI service. Using offline analysis.</string>
+    <string name="ai_backend_error">AI analysis is temporarily unavailable. Using offline analysis.</string>
+    <string name="logout_btn">🚪 Log Out</string>
+</resources>

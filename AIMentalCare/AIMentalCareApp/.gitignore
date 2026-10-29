@@ -1,0 +1,41 @@
+
+gradle-8.2-bin/
+
+# Android and Gradle generated files
+.gradle/
+**/build/
+.idea/
+local.properties
+*.iml
+.cxx/
+.externalNativeBuild/
+
+# Android and Gradle generated files
+.gradle/
+**/build/
+.idea/
+local.properties
+*.iml
+.cxx/
+.externalNativeBuild/
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+
+# Gradle generated files
+.gradle/
+**/build/
+
+# Android Studio local files
+.idea/
+*.iml
+local.properties
+.cxx/
+.externalNativeBuild/
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example

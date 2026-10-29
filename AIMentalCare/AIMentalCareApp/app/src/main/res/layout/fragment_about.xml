@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_mint"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <!-- App Brand Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="12dp">
+
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:src="@drawable/ic_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="MentalCare AI"
+                android:textColor="@color/primary_green"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Understand. Relax. Thrive."
+                android:textColor="@color/ai_purple"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_ai_chip"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="3dp"
+                android:text="Version 2.4.0 • Production Edition"
+                android:textColor="@color/secondary_text"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- Product Summary Card -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.MentalCare.Card.Premium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About MentalCare AI"
+                    android:textColor="@color/primary_green"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="3dp"
+                    android:text="MentalCare AI is an AI-powered mental wellness application designed to help users understand their emotional wellbeing, track stress patterns, maintain healthy habits, and receive personalised wellness support."
+                    android:textColor="@color/main_text"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Key Features Card -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.MentalCare.Card.Premium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Key Features"
+                    android:textColor="@color/primary_green"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="🧠 AI Wellness Check-ins — Understand your daily emotional state\n📊 Stress Insights — View patterns and trends from your check-ins\n📓 Personal Journal — Record thoughts and reflect on your wellbeing\n🤖 AI Wellness Assistant — Contextual conversations for wellness support\n🌿 Wellness Activities — Breathing, relaxation, and healthy habits\n😴 Sleep &amp; Lifestyle — Track sleep, activity, and lifestyle factors\n🔔 Smart Reminders — Receive reminders for check-ins and activities\n⌚ Health &amp; Wearables — View supported health information when connected\n🛡 Safety &amp; Emergency — Access crisis support and trusted contacts"
+                    android:textColor="@color/main_text"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- What You Can Do Card -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.MentalCare.Card.Premium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="What You Can Do"
+                    android:textColor="@color/primary_green"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="• Complete daily wellness check-ins\n• Understand stress patterns &amp; trends\n• Journal your private thoughts\n• Chat with the AI wellness assistant\n• Set and track wellness goals\n• Track sleep, activity, and lifestyle\n• Use guided relaxation exercises\n• Set custom daily reminders\n• Manage trusted contacts and safety support"
+                    android:textColor="@color/main_text"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Expandable Project Structure Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardProjectStructure"
+            style="@style/Widget.MentalCare.Card.Premium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <LinearLayout
+                    android:id="@+id/headerProjectStructure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Project Structure"
+                        android:textColor="@color/primary_green"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtToggleStructure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Expand ▼"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtProjectStructureContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_card_premium"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="3dp"
+                    android:padding="12dp"
+                    android:text="app/src/main/java/com/aimentalcare/app/\n├── api/             (ApiClient &amp; ApiService)\n├── data/            (Room Entities &amp; CheckInDao)\n├── theme/           (Colors, Radius, Typography)\n├── ui/              (Fragments, Activities &amp; Adapters)\n└── utils/           (LocalChatEngine, Reminders &amp; NLP)\n\nbackend/\n└── app.py           (Python Flask REST API)"
+                    android:textColor="@color/main_text"
+                    android:textSize="11sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Technology Stack Card -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.MentalCare.Card.Premium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Technology Stack"
+                    android:textColor="@color/primary_green"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="3dp"
+                    android:text="Kotlin • AndroidX Material 3 • Room Database • Retrofit &amp; OkHttp REST API • On-Device NLP &amp; Chat Engine • Coroutines &amp; Flow • SharedPreferences"
+                    android:textColor="@color/main_text"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Project Authors Card -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.MentalCare.Card.Premium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Project Authors"
+                    android:textColor="@color/primary_green"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="• Joylyn Princita Fernandes (25MCAR0099)\n• Syed Faizan Pasha (25MCAR0138)\n• Vishwajeet Singh (25MCAR0219)\n\nGroup 11\nMaster of Computer Applications (MCA)\nJain (Deemed-to-be University)\nJGI Knowledge Campus, Jayanagar, Bengaluru"
+                    android:textColor="@color/main_text"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Expandable Wellness Disclaimer Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardDisclaimer"
+            style="@style/Widget.MentalCare.Card.Premium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <LinearLayout
+                    android:id="@+id/headerDisclaimer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Wellness Disclaimer"
+                        android:textColor="@color/primary_green"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtToggleDisclaimer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Expand ▼"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtDisclaimerContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:lineSpacingExtra="3dp"
+                    android:text="MentalCare AI is a wellness and early-warning support tool, not a medical diagnostic application. It does not diagnose medical conditions or prescribe treatment. If you are experiencing a mental health emergency, please contact 988 or local emergency services immediately."
+                    android:textColor="@color/secondary_text"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Footer -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="MentalCare AI • Understand. Relax. Thrive."
+            android:textColor="@color/secondary_text"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+</ScrollView>

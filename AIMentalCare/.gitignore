@@ -1,0 +1,32 @@
+# Android Studio and IntelliJ
+*.iml
+.idea/
+.DS_Store
+
+# Gradle
+.gradle/
+gradle-8.2-bin/
+
+# Android build files
+/build/
+/captures/
+**/build/
+.externalNativeBuild/
+.cxx/
+local.properties
+
+# Firebase configuration (contains project configuration)
+google-services.json
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Python virtual environments
+venv/
+.venv/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example

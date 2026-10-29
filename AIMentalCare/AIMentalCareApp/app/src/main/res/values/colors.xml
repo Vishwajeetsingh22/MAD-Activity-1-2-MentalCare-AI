@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Premium Brand Green Palette -->
+    <color name="primary_green">#059669</color>
+    <color name="dark_green">#047857</color>
+    <color name="deep_forest">#022C22</color>
+    <color name="mint">#F0FDF4</color>
+    <color name="light_mint">#D1FAE5</color>
+    <color name="background_mint">#F8FAFC</color>
+    <color name="ic_launcher_background">#047857</color>
+
+    <!-- AI Royal Accent Palette -->
+    <color name="ai_purple">#7C3AED</color>
+    <color name="ai_purple_light">#F3E8FF</color>
+    <color name="ai_purple_dark">#5B21B6</color>
+    <color name="ai_glow">#DDD6FE</color>
+
+    <!-- Status & Stress Palette -->
+    <color name="color_moderate">#F59E0B</color>
+    <color name="color_high">#EF4444</color>
+    <color name="stress_low">#10B981</color>
+    <color name="stress_low_bg">#D1FAE5</color>
+    <color name="stress_moderate">#F59E0B</color>
+    <color name="moderate_stress">#F59E0B</color>
+    <color name="stress_moderate_bg">#FEF3C7</color>
+    <color name="stress_high">#EF4444</color>
+    <color name="high_stress">#EF4444</color>
+    <color name="stress_high_bg">#FEE2E2</color>
+    <color name="stress_critical">#991B1B</color>
+    <color name="stress_critical_bg">#450A0A</color>
+    <color name="alert_banner_red">#EF4444</color>
+
+    <!-- Premium Neutrals (Light Mode) -->
+    <color name="white">#FFFFFF</color>
+    <color name="main_text">#0F172A</color>
+    <color name="secondary_text">#475569</color>
+    <color name="text_dark">#0F172A</color>
+    <color name="text_subtle">#64748B</color>
+    <color name="light_background">#F8FAFC</color>
+    <color name="divider_color">#E2E8F0</color>
+    <color name="card_border">#E2E8F0</color>
+    <color name="card_background">#FFFFFF</color>
+
+    <!-- Dark Mode Cross-reference Tokens -->
+    <color name="dark_background">#0B132B</color>
+    <color name="dark_surface">#1E293B</color>
+    <color name="dark_secondary_text">#94A3B8</color>
+
+    <!-- Backward Compatibility Aliases -->
+    <color name="primary_teal">#059669</color>
+    <color name="primary_teal_dark">#047857</color>
+    <color name="primary_teal_light">#34D399</color>
+    <color name="teal_soft_bg">#D1FAE5</color>
+</resources>

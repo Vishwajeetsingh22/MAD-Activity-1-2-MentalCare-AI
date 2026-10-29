@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="14dp"
+    android:paddingVertical="6dp">
+
+    <!-- USER MESSAGE BUBBLE (Right-Aligned) -->
+    <LinearLayout
+        android:id="@+id/layoutUserMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginStart="48dp"
+        android:background="@drawable/bg_chat_user_bubble"
+        android:elevation="1dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txtUserMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User message goes here..."
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:lineSpacingExtra="2dp" />
+
+        <TextView
+            android:id="@+id/txtUserTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="4dp"
+            android:text="10:30 AM"
+            android:textColor="#D1FAE5"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <!-- AI MESSAGE BUBBLE (Left-Aligned) -->
+    <LinearLayout
+        android:id="@+id/layoutAiMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/bg_chat_ai_bubble"
+        android:elevation="1dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AI Wellness Assistant ✦"
+            android:textColor="@color/ai_purple"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtAiMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="AI message response goes here..."
+            android:textColor="@color/main_text"
+            android:textSize="14sp"
+            android:lineSpacingExtra="3dp" />
+
+        <Button
+            android:id="@+id/btnCallEmergencyContactInChat"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/alert_banner_red"
+            android:paddingHorizontal="12dp"
+            android:text="📞 Call Emergency Contact"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txtAiTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="10:30 AM"
+            android:textColor="@color/secondary_text"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
