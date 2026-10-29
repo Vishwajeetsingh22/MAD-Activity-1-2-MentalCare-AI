@@ -66,36 +66,28 @@ The project explores how mobile app development and AI/ML techniques can support
 
 ## Promotional and demo videos
 
-The MP4 files are stored in the root of this repository. The video players below use the repository's `main` branch so visitors can try to play the videos directly in this README. If GitHub does not render an inline player in your browser, use the **Open video on GitHub** link under that player.
+Watch the project walkthroughs and promotional video below. The video files are stored in this repository. GitHub does not consistently render HTML `<video>` players inside README files, so the most reliable README-friendly option is to show a clickable video thumbnail that opens the MP4 file on GitHub.
+
+> **How to watch:** Click a preview image or its video title to open the corresponding video file. On the file page, use GitHub's video controls if they are available, or choose **Download raw file**.
 
 ### English app demo
 
-<video controls width="720">
-  <source src="https://raw.githubusercontent.com/Vishwajeetsingh22/MAD-Activity-1-2-MentalCare-AI/main/App_demo_English%28version%29.mp4" type="video/mp4">
-  Your browser does not support embedded video. [Open the English app demo](https://github.com/Vishwajeetsingh22/MAD-Activity-1-2-MentalCare-AI/blob/main/App_demo_English%28version%29.mp4).
-</video>
+[![Watch the English app demo](./Advertisment_image.jpeg)](./App_demo_English%28version%29.mp4)
 
-[Open video on GitHub — English app demo](https://github.com/Vishwajeetsingh22/MAD-Activity-1-2-MentalCare-AI/blob/main/App_demo_English%28version%29.mp4)
+[**▶ Watch English app demo**](./App_demo_English%28version%29.mp4)
 
 ### Hindi app demo
 
-<video controls width="720">
-  <source src="https://raw.githubusercontent.com/Vishwajeetsingh22/MAD-Activity-1-2-MentalCare-AI/main/App_demo_hindi%28version%29.mp4" type="video/mp4">
-  Your browser does not support embedded video. [Open the Hindi app demo](https://github.com/Vishwajeetsingh22/MAD-Activity-1-2-MentalCare-AI/blob/main/App_demo_hindi%28version%29.mp4).
-</video>
+[![Watch the Hindi app demo](./Advertisment_image.jpeg)](./App_demo_hindi%28version%29.mp4)
 
-[Open video on GitHub — Hindi app demo](https://github.com/Vishwajeetsingh22/MAD-Activity-1-2-MentalCare-AI/blob/main/App_demo_hindi%28version%29.mp4)
+[**▶ Watch Hindi app demo**](./App_demo_hindi%28version%29.mp4)
 
 ### English promotional video
 
-<video controls width="720">
-  <source src="https://raw.githubusercontent.com/Vishwajeetsingh22/MAD-Activity-1-2-MentalCare-AI/main/App_Promo_video_English%28version%29.mp4" type="video/mp4">
-  Your browser does not support embedded video. [Open the English promotional video](https://github.com/Vishwajeetsingh22/MAD-Activity-1-2-MentalCare-AI/blob/main/App_Promo_video_English%28version%29.mp4).
-</video>
+[![Watch the English promotional video](./Advertisment_image.jpeg)](./App_Promo_video_English%28version%29.mp4)
 
-[Open video on GitHub — English promotional video](https://github.com/Vishwajeetsingh22/MAD-Activity-1-2-MentalCare-AI/blob/main/App_Promo_video_English%28version%29.mp4)
+[**▶ Watch English promotional video**](./App_Promo_video_English%28version%29.mp4)
 
-> **GitHub note:** Inline playback depends on GitHub's README renderer and browser support. The links above are included as a reliable fallback. Make sure all three MP4 files are committed to the `main` branch with the exact filenames shown above.
 
 ## Screenshots
 
