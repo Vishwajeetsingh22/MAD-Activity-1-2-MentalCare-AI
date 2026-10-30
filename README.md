@@ -155,6 +155,24 @@ The repository also includes Gradle wrapper files, application resources, test f
 - **AI/ML assets:** model/vectorizer files and training or NLP scripts.
 - **Testing:** Android unit-test sources and Flutter test sources.
 
+### Source code
+
+The complete source code of MentalCare AI is available in the `AIMentalCare` folder. Browse the source files directly on GitHub using the links below.
+
+| Component | Source code link |
+|---|---|
+| Complete project source | [Browse AIMentalCare](https://github.com/Vishwajeetsingh22/MAD-Activity-1-2-MentalCare-AI/tree/main/AIMentalCare) |
+| Android application (Kotlin/Gradle) | [Browse AIMentalCareApp](https://github.com/Vishwajeetsingh22/MAD-Activity-1-2-MentalCare-AI/tree/main/AIMentalCare/AIMentalCareApp) |
+| Flutter/Dart source code | [Browse lib](https://github.com/Vishwajeetsingh22/MAD-Activity-1-2-MentalCare-AI/tree/main/AIMentalCare/lib) |
+| Flutter application project | [Browse mentalcare_ai_flutter](https://github.com/Vishwajeetsingh22/MAD-Activity-1-2-MentalCare-AI/tree/main/AIMentalCare/mentalcare_ai_flutter) |
+| Python backend and AI/ML files | [Browse backend_server](https://github.com/Vishwajeetsingh22/MAD-Activity-1-2-MentalCare-AI/tree/main/AIMentalCare/backend_server) |
+
+To download the complete repository source code, run:
+
+```bash
+git clone https://github.com/Vishwajeetsingh22/MAD-Activity-1-2-MentalCare-AI.git
+```
+
 ## Getting started
 
 ### Requirements
