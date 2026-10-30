@@ -66,27 +66,26 @@ The project explores how mobile app development and AI/ML techniques can support
 
 ## Promotional and demo videos
 
-Watch the project walkthroughs and promotional video below. The video files are stored in this repository. GitHub does not consistently render HTML `<video>` players inside README files, so the most reliable README-friendly option is to show a clickable video thumbnail that opens the MP4 file on GitHub.
+The promotional videos below are the actual MP4 files uploaded to this repository. They are linked by their current GitHub filenames—not to the advertisement image.
 
-> **How to watch:** Click a preview image or its video title to open the corresponding video file. On the file page, use GitHub's video controls if they are available, or choose **Download raw file**.
+> **Playback:** Select a video title to open its MP4 file on GitHub. GitHub normally provides a video preview on the file page where browser playback is supported.
 
-### English app demo
+### MentalCare AI — English promotional video
 
-[![Watch the English app demo](./Advertisment_image.jpeg)](./App_demo_English%28version%29.mp4)
+[**▶ Watch MentalCare AI English Promo**](./MentalCare_AI_Promo_English.mp4)
 
-[**▶ Watch English app demo**](./App_demo_English%28version%29.mp4)
+[Open MP4 file on GitHub](https://github.com/Vishwajeetsingh22/MAD-Activity-1-2-MentalCare-AI/blob/main/MentalCare_AI_Promo_English.mp4)
 
-### Hindi app demo
+### MentalCare AI — Hindi promotional video
 
-[![Watch the Hindi app demo](./Advertisment_image.jpeg)](./App_demo_hindi%28version%29.mp4)
+[**▶ Watch MentalCare AI Hindi Promo**](./MentalCare_AI_Promo_Hindi.mp4)
 
-[**▶ Watch Hindi app demo**](./App_demo_hindi%28version%29.mp4)
+[Open MP4 file on GitHub](https://github.com/Vishwajeetsingh22/MAD-Activity-1-2-MentalCare-AI/blob/main/MentalCare_AI_Promo_Hindi.mp4)
 
-### English promotional video
+### Additional app demo videos
 
-[![Watch the English promotional video](./Advertisment_image.jpeg)](./App_Promo_video_English%28version%29.mp4)
-
-[**▶ Watch English promotional video**](./App_Promo_video_English%28version%29.mp4)
+- [English app demo](./App_demo_English%28version%29.mp4)
+- [Hindi app demo](./App_demo_hindi%28version%29.mp4)
 
 
 ## Screenshots
@@ -151,7 +150,8 @@ MAD-Activity-1-2-MentalCare-AI/
 │   └── README.md                  # Project-specific documentation
 ├── Screenshots & Screenrecordings of app/
 ├── Advertisment_image.jpeg
-├── App_Promo_video_English(version).mp4
+├── MentalCare_AI_Promo_English.mp4
+├── MentalCare_AI_Promo_Hindi.mp4
 ├── App_demo_English(version).mp4
 ├── App_demo_hindi(version).mp4
 ├── MAD_Activity_Reviews_1&2.pdf
