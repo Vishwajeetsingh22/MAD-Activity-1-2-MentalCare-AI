@@ -27,6 +27,7 @@
 - [Promotional and demo videos](#promotional-and-demo-videos)
 - [Screenshots](#screenshots)
 - [Technology and project structure](#technology-and-project-structure)
+- [Source code](#source-code)
 - [Getting started](#getting-started)
 - [Backend setup](#backend-setup)
 - [Testing](#testing)
@@ -159,6 +160,28 @@ MAD-Activity-1-2-MentalCare-AI/
 ```
 
 The repository also includes Gradle wrapper files, application resources, test files, model assets, and configuration templates. Not every folder is required for every build path.
+
+## Source code
+
+**Yes — the repository includes a project source folder named `AIMentalCare`.** Open the links below to browse the source files directly on GitHub.
+
+| Component | Source-code location |
+|---|---|
+| Complete project source folder | [Browse AIMentalCare](https://github.com/Vishwajeetsingh22/MAD-Activity-1-2-MentalCare-AI/tree/main/AIMentalCare) |
+| Android application (Kotlin/Gradle) | [Browse AIMentalCareApp](https://github.com/Vishwajeetsingh22/MAD-Activity-1-2-MentalCare-AI/tree/main/AIMentalCare/AIMentalCareApp) |
+| Flutter/Dart source (`lib`) | [Browse lib](https://github.com/Vishwajeetsingh22/MAD-Activity-1-2-MentalCare-AI/tree/main/AIMentalCare/lib) |
+| Flutter application project | [Browse mentalcare_ai_flutter](https://github.com/Vishwajeetsingh22/MAD-Activity-1-2-MentalCare-AI/tree/main/AIMentalCare/mentalcare_ai_flutter) |
+| Python backend and AI/ML-related files | [Browse backend_server](https://github.com/Vishwajeetsingh22/MAD-Activity-1-2-MentalCare-AI/tree/main/AIMentalCare/backend_server) |
+
+You can also download the complete repository source using Git:
+
+```bash
+git clone https://github.com/Vishwajeetsingh22/MAD-Activity-1-2-MentalCare-AI.git
+```
+
+The folder links above are based on the project layout documented in this README. If a particular subfolder link does not open, use the **AIMentalCare** link to inspect the actual folders currently present in the repository.
+
+---
 
 ### Technologies represented in the repository
 
