@@ -66,28 +66,15 @@ The project explores how mobile app development and AI/ML techniques can support
 
 ## Promotional and demo videos
 
-Watch the project walkthroughs and promotional video below. The video files are stored in this repository. GitHub does not consistently render HTML `<video>` players inside README files, so the most reliable README-friendly option is to show a clickable video thumbnail that opens the MP4 file on GitHub.
+The repository includes demo and promotional videos. Select a link below to open or download a video from GitHub.
 
-> **How to watch:** Click a preview image or its video title to open the corresponding video file. On the file page, use GitHub's video controls if they are available, or choose **Download raw file**.
+| Video | Description |
+|---|---|
+| [English app demo](./App_demo_English%28version%29.mp4) | English walkthrough/demo video. |
+| [Hindi app demo](./App_demo_hindi%28version%29.mp4) | Hindi walkthrough/demo video. |
+| [English promotional video](./App_Promo_video_English%28version%29.mp4) | English promotional overview. |
 
-### English app demo
-
-[![Watch the English app demo](./Advertisment_image.jpeg)](./App_demo_English%28version%29.mp4)
-
-[**▶ Watch English app demo**](./App_demo_English%28version%29.mp4)
-
-### Hindi app demo
-
-[![Watch the Hindi app demo](./Advertisment_image.jpeg)](./App_demo_hindi%28version%29.mp4)
-
-[**▶ Watch Hindi app demo**](./App_demo_hindi%28version%29.mp4)
-
-### English promotional video
-
-[![Watch the English promotional video](./Advertisment_image.jpeg)](./App_Promo_video_English%28version%29.mp4)
-
-[**▶ Watch English promotional video**](./App_Promo_video_English%28version%29.mp4)
-
+If a video does not preview in the browser, open its file page on GitHub and select **Download raw file**.
 
 ## Screenshots
 
