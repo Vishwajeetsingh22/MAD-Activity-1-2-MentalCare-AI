@@ -27,6 +27,7 @@
 - [Promotional and demo videos](#promotional-and-demo-videos)
 - [Screenshots](#screenshots)
 - [Technology and project structure](#technology-and-project-structure)
+- [Source code](#source-code)
 - [Getting started](#getting-started)
 - [Backend setup](#backend-setup)
 - [Testing](#testing)
@@ -66,15 +67,36 @@ The project explores how mobile app development and AI/ML techniques can support
 
 ## Promotional and demo videos
 
-The repository includes demo and promotional videos. Select a link below to open or download a video from GitHub.
+The promotional videos and app demo videos are available in the GitHub repository. Select the play icon to open the actual MP4 file on GitHub.
+
+<p align="center">
+  <a href="./MentalCare_AI_Promo_English.mp4">
+    <img alt="▶ Watch MentalCare AI English promotional video" src="https://img.shields.io/badge/▶%20WATCH-ENGLISH%20PROMO-2f855a?style=for-the-badge">
+  </a>
+  &nbsp;
+  <a href="./MentalCare_AI_Promo_Hindi.mp4">
+    <img alt="▶ Watch MentalCare AI Hindi promotional video" src="https://img.shields.io/badge/▶%20WATCH-HINDI%20PROMO-2f855a?style=for-the-badge">
+  </a>
+</p>
 
 | Video | Description |
 |---|---|
-| [English app demo](./App_demo_English%28version%29.mp4) | English walkthrough/demo video. |
-| [Hindi app demo](./App_demo_hindi%28version%29.mp4) | Hindi walkthrough/demo video. |
-| [English promotional video](./App_Promo_video_English%28version%29.mp4) | English promotional overview. |
+| [▶ English promotional video](./MentalCare_AI_Promo_English.mp4) | MentalCare AI English promotional overview. |
+| [▶ Hindi promotional video](./MentalCare_AI_Promo_Hindi.mp4) | MentalCare AI Hindi promotional overview. |
+| [▶ English app demo](./App_demo_English%28version%29.mp4) | English walkthrough/demo video. |
+| [▶ Hindi app demo](./App_demo_hindi%28version%29.mp4) | Hindi walkthrough/demo video. |
 
-If a video does not preview in the browser, open its file page on GitHub and select **Download raw file**.
+### Project review document
+
+<p align="center">
+  <a href="./MAD_Activity_Reviews_1%262.pdf">
+    <img alt="Open MAD Activity Reviews 1 and 2 PDF" src="https://img.shields.io/badge/📄%20OPEN-MAD%20ACTIVITY%20REVIEWS-2563eb?style=for-the-badge">
+  </a>
+</p>
+
+[Open MAD Activity Reviews 1 & 2 (PDF)](./MAD_Activity_Reviews_1%262.pdf)
+
+Select a play icon or video title to open the corresponding MP4 file page on GitHub. If GitHub does not preview the video in your browser, use **Download raw file** on that file page.
 
 ## Screenshots
 
